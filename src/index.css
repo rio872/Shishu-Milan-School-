@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #07152f;
+  --color-navy-900: #0b1f46;
+  --color-navy-800: #102b5c;
+  --color-royal-700: #1546a0;
+  --color-royal-600: #1d5bd1;
+  --color-royal-500: #2c6ee8;
+  --color-gold-500: #d9a928;
+  --color-gold-400: #efc85c;
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Playfair Display", serif;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color: #172033;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(239, 200, 92, 0.75);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #efc85c;
+  color: #07152f;
+}
+
+.section-shell {
+  width: min(1180px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.section-padding {
+  padding-block: clamp(4.5rem, 8vw, 7rem);
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #1546a0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.section-kicker::before {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background: #d9a928;
+}
+
+.section-title {
+  margin-top: 0.9rem;
+  max-width: 760px;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 1.1;
+  font-weight: 800;
+  color: #07152f;
+}
+
+.section-copy {
+  margin-top: 1rem;
+  max-width: 680px;
+  color: #5b6475;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.glass-card {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.hero-mesh {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(44, 110, 232, 0.35), transparent 30%),
+    radial-gradient(circle at 85% 10%, rgba(239, 200, 92, 0.18), transparent 24%),
+    linear-gradient(120deg, rgba(7, 21, 47, 0.96), rgba(11, 31, 70, 0.84));
+}
+
+.subtle-grid {
+  background-image:
+    linear-gradient(rgba(21, 70, 160, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 70, 160, 0.05) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
