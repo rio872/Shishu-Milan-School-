@@ -274,50 +274,7 @@ export const calendarItems = [
   },
 ];
 
-export const learningResources = [
-  {
-    title: 'Library',
-    icon: 'Library',
-    description:
-      'Reading resources that support academic learning and reading habits.',
-  },
-  {
-    title: 'Computer Laboratory',
-    icon: 'Laptop',
-    description:
-      'Practical computer learning and development of digital skills.',
-  },
-  {
-    title: 'Science Laboratory',
-    icon: 'FlaskConical',
-    description:
-      'Practical experiments and observation-based scientific learning.',
-  },
-  {
-    title: 'Smart Classrooms',
-    icon: 'Monitor',
-    description:
-      'Visual and digital resources that make lessons more engaging.',
-  },
-  {
-    title: 'Educational Materials',
-    icon: 'BookOpen',
-    description:
-      'Charts, models, books and classroom resources for meaningful learning.',
-  },
-  {
-    title: 'Digital Resources',
-    icon: 'Globe2',
-    description:
-      'Selected digital materials that support research and understanding.',
-  },
-  {
-    title: 'Project Spaces',
-    icon: 'FolderKanban',
-    description:
-      'Spaces for group activities, projects, creative work and exhibitions.',
-  },
-];
+
 
 export const studentSupportItems = [
   'Extra classes when required',

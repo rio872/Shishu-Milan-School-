@@ -61,7 +61,6 @@ import {
   assessmentItems,
   calendarItems,
   extracurricularActivities,
-  learningResources,
   studentSupportItems,
   subjects,
   teachingMethods,
@@ -1035,55 +1034,7 @@ export default function AcademicsPage() {
           </div>
         </section>
 
-        {/* Learning resources */}
-        <section className="bg-white py-20 sm:py-24">
-          <div className="section-shell">
-            <SectionHeading
-              eyebrow="Supporting education"
-              title="Learning Resources"
-              description="School resources help students learn through reading, technology, observation, experimentation, projects and creative activities."
-              centered
-            />
-
-            <motion.div
-              variants={stagger}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{
-                once: true,
-                amount: 0.15,
-              }}
-              className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
-            >
-              {learningResources.map((resource) => {
-                const Icon = getIcon(resource.icon);
-
-                return (
-                  <motion.article
-                    key={resource.title}
-                    variants={reveal}
-                    whileHover={{
-                      y: -6,
-                    }}
-                    className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-xl"
-                  >
-                    <span className="grid size-12 place-items-center rounded-2xl bg-blue-50 text-royal-600">
-                      <Icon size={23} aria-hidden="true" />
-                    </span>
-
-                    <h3 className="mt-5 font-display text-xl font-bold text-navy-950">
-                      {resource.title}
-                    </h3>
-
-                    <p className="mt-3 text-sm leading-7 text-slate-600">
-                      {resource.description}
-                    </p>
-                  </motion.article>
-                );
-              })}
-            </motion.div>
-          </div>
-        </section>
+        
 
         {/* Student support */}
         <section className="bg-slate-50 py-20 sm:py-24">
