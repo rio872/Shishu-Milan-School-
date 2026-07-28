@@ -24,12 +24,12 @@ const photoIsPlaceholder =
           )}
           <div className="absolute inset-x-5 bottom-5 rounded-2xl bg-white p-4 text-navy-950 shadow-xl">
             <strong className="block font-display text-xl">{school.founderName}</strong>
-            <span className="text-sm font-bold text-royal-700">Founder</span>
+            <span className="text-sm font-bold text-royal-700">Chairperson</span>
           </div>
         </Reveal>
 
         <Reveal delay={0.12}>
-          <p className="section-kicker !text-gold-400">founder Message</p>
+          <p className="section-kicker !text-gold-400">Chairperson Message</p>
           <Quote className="mt-7 text-gold-400" size={48} />
           <blockquote className="mt-4 font-display text-[clamp(1.9rem,4vw,3.25rem)] font-bold leading-tight text-balance">
             “We believe education is most powerful when students feel safe to question, explore, create and become their best selves.”

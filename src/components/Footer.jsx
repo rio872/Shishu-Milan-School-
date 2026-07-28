@@ -250,12 +250,7 @@ export default function Footer() {
                 Academic Programs
               </a>
 
-              <a
-                href="#facilities"
-                className="transition hover:text-gold-400"
-              >
-                Campus Facilities
-              </a>
+              
 
               <a
                 href="#contact"
@@ -309,9 +304,7 @@ export default function Footer() {
               © {new Date().getFullYear()} {school.name}. All rights reserved.
             </p>
 
-            <p>
-              Designed for students, parents and teachers.
-            </p>
+            
           </div>
         </div>
       </footer>
