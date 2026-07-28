@@ -22,6 +22,10 @@ export const school = {
   logo: '/logo.png',
   slogan: 'Education is Light',
 
+  aboutHeroImage: '/about-hero.png',
+  aboutImageOne: '/school-1.png',
+  aboutImageTwo: '/about-school-2.jpg', 
+
   phone: '01-5128064',
   email: 'shishu20649@gmail.com',
   address: 'Budhanilkantha-13, Chunikhel',
@@ -31,6 +35,9 @@ export const school = {
   founderName: 'Radhe Shyam Shrestha',
   founderPhoto: '/founder.png',
 
+  academicsHeroImage: '/academics-hero.jpg',
+  academicOverviewImage: '/academic-overview.jpg',
+  academicCalendarFile: '/academic-calendar.pdf',
   whatsapp: '9779851005539',
 
   mapEmbed:
@@ -41,13 +48,34 @@ export const school = {
 };
 
 export const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Academics', href: '#academics' },
-  { label: 'Facilities', href: '#facilities' },
-  { label: 'Notices', href: '#notices' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Contact', href: '#contact' },
+  {
+    label: 'Home',
+    href: '/',
+  },
+  {
+    label: 'About',
+    href: '/about',
+  },
+  {
+    label: 'Academics',
+    href: '/academics',
+  },
+  {
+    label: 'Facilities',
+    href: '/#facilities',
+  },
+  {
+    label: 'Notices',
+    href: '/#notices',
+  },
+  {
+    label: 'Gallery',
+    href: '/#gallery',
+  },
+  {
+    label: 'Contact',
+    href: '/#contact',
+  },
 ];
 
 export const stats = [
@@ -61,7 +89,7 @@ export const programs = [
   {
     icon: BookOpen,
     title: 'Early Years',
-    ages: 'Nursery–UKG',
+    ages: 'PG–UKG',
     description:
       'A joyful foundation focused on confidence, communication, play and early literacy.',
   },

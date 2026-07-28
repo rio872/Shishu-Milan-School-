@@ -134,7 +134,7 @@ export default function Footer() {
   const socialLinks = [
     {
       name: 'Facebook',
-      url: 'https://www.facebook.com/YOUR_FACEBOOK_PAGE',
+      url: 'https://www.facebook.com/share/19P2umYQPi/?mibextid=wwXIfr',
       icon: Facebook,
     },
     {
