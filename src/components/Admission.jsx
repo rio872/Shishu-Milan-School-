@@ -13,7 +13,7 @@ export default function Admission() {
             Give your child a confident start to their future.
           </h2>
           <div className="mt-6 flex flex-wrap gap-5 text-sm font-bold text-white/85">
-            {['Simple enquiry process', 'Campus visit available', 'Friendly admission support'].map((item) => (
+            {['Simple enquiry process', 'school visit available', 'Friendly admission support'].map((item) => (
               <span key={item} className="flex items-center gap-2"><CheckCircle2 size={17} className="text-gold-400" /> {item}</span>
             ))}
           </div>

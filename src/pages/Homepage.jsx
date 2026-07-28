@@ -1,7 +1,6 @@
 import About from '../components/About';
 import { Academics, WhyChoose } from '../components/Academics';
 import Admission from '../components/Admission';
-import Announcement from '../components/Announcement';
 import Contact from '../components/Contact';
 import Facilities from '../components/Facilities';
 import Footer, { Newsletter } from '../components/Footer';
@@ -12,7 +11,7 @@ import Location from '../components/Location';
 import Founder from '../components/Founder';
 import Stats from '../components/Stats';
 import Testimonials from '../components/Testimonials';
-import Updates from '../components/Updates';
+
 
 export default function HomePage() {
   return (
@@ -21,14 +20,14 @@ export default function HomePage() {
 
       <main>
         <Hero />
-        <Announcement />
+        
         <About />
         <Stats />
         <Academics />
         <WhyChoose />
         <Founder />
         <Facilities />
-        <Updates />
+       
         <Gallery />
         <Testimonials />
         <Admission />

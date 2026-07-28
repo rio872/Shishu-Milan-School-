@@ -40,6 +40,8 @@ export const school = {
   academicCalendarFile: '/academic-calendar.pdf',
   whatsapp: '9779851005539',
 
+  
+
   mapEmbed:
     'https://www.google.com/maps?q=Shishu+Milan+English+School,+Budhanilkantha-13,+Chunikhel,+Nepal&output=embed',
 
@@ -62,12 +64,9 @@ export const navLinks = [
   },
   {
     label: 'Facilities',
-    href: '/#facilities',
+    href: '/facilities',
   },
-  {
-    label: 'Notices',
-    href: '/#notices',
-  },
+ 
   {
     label: 'Gallery',
     href: '/#gallery',
@@ -124,7 +123,7 @@ export const strengths = [
   },
   {
     icon: ShieldCheck,
-    title: 'Safe & Caring Campus',
+    title: 'Safe & Caring school',
     description: 'A respectful environment with attentive supervision and clear safeguarding practices.',
   },
   {
@@ -172,7 +171,7 @@ export const facilities = [
   },
   {
     icon: Palette,
-    title: 'Creative Arts Studio',
+    title: 'Music Studio',
     image: 'https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=900&q=80',
   },
   {
@@ -262,7 +261,7 @@ export const testimonials = [
     name: 'Suman Karki',
     role: 'Parent of Grade 2 Student',
     quote:
-      'The campus feels safe and welcoming. My daughter looks forward to school every morning and has developed excellent learning habits.',
+      'The school feels safe and welcoming. My daughter looks forward to school every morning and has developed excellent learning habits.',
   },
 ];
 

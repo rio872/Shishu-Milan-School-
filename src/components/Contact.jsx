@@ -51,7 +51,7 @@ export default function Contact() {
           <SectionHeading
             kicker="Contact & Enquiry"
             title="We are ready to answer your questions."
-            copy="Speak with our admission team, request a campus visit or ask about the right program for your child."
+            copy="Speak with our admission team, request a school visit or ask about the right program for your child."
           />
           <Reveal delay={0.08} className="mt-9 space-y-4">
             <a href={`tel:${school.phone}`} className="flex items-center gap-4 rounded-2xl bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">

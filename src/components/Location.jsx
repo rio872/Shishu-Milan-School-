@@ -12,7 +12,7 @@ export default function Location() {
         <SectionHeading
           kicker="Our Location"
           title="Easy to find and convenient to reach."
-          copy="Visit our campus to meet the team, explore the facilities and experience our learning environment."
+          copy="Visit our school to meet the team, explore the facilities and experience our learning environment."
           align="center"
         />
 

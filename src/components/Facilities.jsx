@@ -6,9 +6,9 @@ export default function Facilities() {
     <section id="facilities" className="section-padding bg-white">
       <div className="section-shell">
         <SectionHeading
-          kicker="Campus Facilities"
+          kicker="school Facilities"
           title="Spaces that make learning practical, active and enjoyable."
-          copy="Our campus provides students with the resources they need to learn, experiment, perform, collaborate and stay active."
+          copy="Our school provides students with the resources they need to learn, experiment, perform, collaborate and stay active."
           align="center"
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
