@@ -40,7 +40,7 @@ export const school = {
   academicCalendarFile: '/academic-calendar.pdf',
   whatsapp: '9779851005539',
 
-  
+  galleryHeroImage: '/gallery/gallery-hero.jpg',
 
   mapEmbed:
     'https://www.google.com/maps?q=Shishu+Milan+English+School,+Budhanilkantha-13,+Chunikhel,+Nepal&output=embed',
@@ -69,7 +69,7 @@ export const navLinks = [
  
   {
     label: 'Gallery',
-    href: '/#gallery',
+    href: '/gallery',
   },
   {
     label: 'Contact',
