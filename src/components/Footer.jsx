@@ -81,12 +81,12 @@ export function Newsletter() {
                 setMessage('');
               }}
               placeholder="Enter your email address"
-              className="min-h-13 flex-1 rounded-full border-0 bg-white px-5 text-sm text-navy-950 outline-none ring-4 ring-transparent focus:ring-navy-900/10"
+              className="min-h-14 flex-1 rounded-full border-0 bg-white px-5 text-sm text-navy-950 outline-none ring-4 ring-transparent focus:ring-navy-900/10"
             />
 
             <button
               type="submit"
-              className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-navy-900 px-6 text-sm font-extrabold text-white transition hover:bg-royal-700"
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-navy-900 px-6 text-sm font-extrabold text-white transition hover:bg-royal-700"
             >
               Subscribe
               <Send size={16} aria-hidden="true" />
@@ -237,7 +237,7 @@ export default function Footer() {
 
             <div className="mt-5 grid gap-3 text-sm font-semibold text-white/60">
               <a
-                href="#admission"
+                href="/apply"
                 className="transition hover:text-gold-400"
               >
                 Admission Process

@@ -79,12 +79,9 @@ export const departmentContacts = [
     department: 'Admission Office',
     description:
       'Admission forms, entrance procedures, grade availability and school visits.',
-    phone:
-      school.phone || '[SCHOOL PHONE]',
-    email:
-      school.email || '[SCHOOL EMAIL]',
-    hours:
-      school.officeHours || '[OFFICE HOURS]',
+    phone: '01-4375515',
+    email: 'shishu2049@gmail.com',
+    hours: 'Sun–Fri: 8:00 AM–4:30 PM',
   },
   {
     id: 2,
@@ -92,12 +89,9 @@ export const departmentContacts = [
     department: 'Administration',
     description:
       'General enquiries, official documents, certificates and school administration.',
-    phone:
-      school.phone || '[SCHOOL PHONE]',
-    email:
-      school.email || '[SCHOOL EMAIL]',
-    hours:
-      school.officeHours || '[OFFICE HOURS]',
+    phone: '9801319264',
+    email: 'shishu2049@gmail.com',
+    hours: 'Sun–Fri: 8:00 AM–4:30 PM',
   },
   {
     id: 3,
@@ -105,41 +99,31 @@ export const departmentContacts = [
     department: 'Accounts Department',
     description:
       'School fees, payment records, receipts and financial enquiries.',
-    phone:
-      school.phone || '[SCHOOL PHONE]',
-    email:
-      school.email || '[SCHOOL EMAIL]',
-    hours:
-      school.officeHours || '[OFFICE HOURS]',
+    phone: '01-15128064',
+    email: 'shishu2049@gmail.com',
+    hours: 'Sun–Fri: 8:00 AM–4:30 PM',
   },
   {
     id: 4,
     icon: 'academic',
     department: 'Academic Department',
     description:
-      'Curriculum, examinations, academic progress and student learning support.',
-    phone:
-      school.phone || '[SCHOOL PHONE]',
-    email:
-      school.email || '[SCHOOL EMAIL]',
-    hours:
-      school.officeHours || '[OFFICE HOURS]',
+      'Curriculum, examinations, academic progress and student support.',
+    phone: '9841660714',
+    email: 'shishu2049@gmail.com',
+    hours: 'Sun–Fri: 8:00 AM–4:30 PM',
   },
   {
     id: 5,
     icon: 'transport',
     department: 'Transportation Department',
     description:
-      'School bus routes, pickup points, transportation schedules and safety.',
-    phone:
-      school.phone || '[SCHOOL PHONE]',
-    email:
-      school.email || '[SCHOOL EMAIL]',
-    hours:
-      school.officeHours || '[OFFICE HOURS]',
+      'School bus routes, pickup points, schedules and transportation safety.',
+    phone: '9823425573',
+    email: 'shishu2049@gnail.com',
+    hours: 'Sun–Fri: 8:00 AM–4:30 PM',
   },
 ];
-
 export const contactFaqs = [
   {
     id: 1,

@@ -1305,7 +1305,7 @@ export default function AcademicsPage() {
               className="mt-9 flex flex-col justify-center gap-4 sm:flex-row"
             >
               <a
-                href="/#admission"
+                href="/apply"
                 className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-gold-400 px-7 font-extrabold text-navy-950 transition hover:-translate-y-1 hover:bg-white"
               >
                 Apply for Admission

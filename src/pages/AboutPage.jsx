@@ -1104,8 +1104,8 @@ export default function AboutPage() {
               className="mt-9 flex flex-col justify-center gap-4 sm:flex-row"
             >
               <a
-                href="/#admission"
-                className="inline-flex min-h-13 items-center justify-center gap-2 rounded-full bg-gold-400 px-7 font-extrabold text-navy-950 transition hover:-translate-y-1 hover:bg-white"
+                href="/apply"
+                className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-gold-400 px-7 font-extrabold text-navy-950 transition hover:-translate-y-1 hover:bg-white"
               >
                 Apply Now
                 <ArrowRight size={18} aria-hidden="true" />
@@ -1113,7 +1113,7 @@ export default function AboutPage() {
 
               <a
                 href="/#contact"
-                className="inline-flex min-h-13 items-center justify-center rounded-full border border-white/35 px-7 font-extrabold text-white transition hover:-translate-y-1 hover:bg-white hover:text-navy-950"
+                className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/35 px-7 font-extrabold text-white transition hover:-translate-y-1 hover:bg-white hover:text-navy-950"
               >
                 Contact Us
               </a>

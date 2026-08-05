@@ -134,7 +134,7 @@ export default function Header() {
           {/* Right buttons */}
           <div className="flex items-center gap-2">
             <a
-              href="#admission"
+              href="/apply"
               className="hidden rounded-full bg-royal-600 px-5 py-3 text-sm font-extrabold text-white shadow-lg shadow-royal-600/20 transition hover:-translate-y-0.5 hover:bg-navy-900 sm:inline-flex"
             >
               Apply Now
@@ -223,7 +223,7 @@ export default function Header() {
               ))}
 
               <a
-                href="#admission"
+                href="/apply"
                 onClick={() => setOpen(false)}
                 className="mt-7 rounded-full bg-royal-600 px-5 py-3.5 text-center font-extrabold text-white transition hover:bg-navy-900"
               >

@@ -35,7 +35,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <PrimaryButton href="#admission">Start Your Admission</PrimaryButton>
+            <PrimaryButton href="/apply">Start Your Admission</PrimaryButton>
             <OutlineButton href="#about">
               <PlayCircle size={18} /> Explore Our School
             </OutlineButton>
