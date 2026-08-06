@@ -1,53 +1,94 @@
-const wait = (milliseconds) =>
-  new Promise((resolve) => {
-    window.setTimeout(resolve, milliseconds);
-  });
+const supabaseUrl =
+  import.meta.env.VITE_SUPABASE_URL;
 
-function generateReferenceNumber() {
-  const currentDate = new Date();
+const supabasePublishableKey =
+  import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
-  const year = currentDate.getFullYear();
+function validateConfiguration() {
+  if (
+    !supabaseUrl ||
+    supabaseUrl.includes('your-project')
+  ) {
+    throw new Error(
+      'The real Supabase project URL is missing from the .env file.',
+    );
+  }
 
-  const month = String(
-    currentDate.getMonth() + 1,
-  ).padStart(2, '0');
-
-  const day = String(
-    currentDate.getDate(),
-  ).padStart(2, '0');
-
-  const randomNumber = Math.floor(
-    1000 + Math.random() * 9000,
-  );
-
-  return `SMES-${year}${month}${day}-${randomNumber}`;
+  if (
+    !supabasePublishableKey ||
+    supabasePublishableKey.includes('your-key')
+  ) {
+    throw new Error(
+      'The real Supabase publishable key is missing from the .env file.',
+    );
+  }
 }
 
 export async function submitAdmissionApplication(
   application,
 ) {
-  /*
-   * Temporary frontend simulation.
-   *
-   * This does not send the application to an actual
-   * database, email address, or admin dashboard yet.
-   *
-   * Replace this function with a backend API request
-   * when the admission backend is ready.
-   */
+  validateConfiguration();
 
-  if (!application) {
+  if (!application?.form) {
     throw new Error(
-      'No admission application was provided.',
+      'Admission application information is missing.',
     );
   }
 
-  await wait(1400);
+  const functionUrl =
+    `${supabaseUrl}/functions/v1/Submit-admission`;
+
+  let response;
+
+  try {
+    response = await fetch(functionUrl, {
+      method: 'POST',
+
+      headers: {
+        'Content-Type': 'application/json',
+        apikey: supabasePublishableKey,
+      },
+
+      body: JSON.stringify(application),
+    });
+  } catch (error) {
+    console.error(
+      'Supabase connection error:',
+      error,
+    );
+
+    throw new Error(
+      'Unable to connect to the admission server. Please check your internet connection.',
+    );
+  }
+
+  let result;
+
+  try {
+    result = await response.json();
+  } catch {
+    throw new Error(
+      'The admission server returned an invalid response.',
+    );
+  }
+
+  if (!response.ok || !result.success) {
+    console.error(
+      'Admission submission error:',
+      result,
+    );
+
+    throw new Error(
+      result.message ||
+        'The application could not be submitted.',
+    );
+  }
 
   return {
     success: true,
-    referenceNumber: generateReferenceNumber(),
-    submittedAt: new Date().toISOString(),
-    application,
+    referenceNumber:
+      result.referenceNumber,
+    submittedAt:
+      result.submittedAt,
   };
 }

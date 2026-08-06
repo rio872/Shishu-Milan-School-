@@ -10,28 +10,23 @@ const templateId =
 const publicKey =
   import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-function emailJsIsConfigured() {
-  return (
+function isEmailJsConfigured() {
+  return Boolean(
     serviceId &&
-    templateId &&
-    publicKey &&
-    !serviceId.includes('your_id') &&
-    !templateId.includes('your_id') &&
-    !publicKey.includes('your_public_key')
+      templateId &&
+      publicKey &&
+      !serviceId.includes('your_') &&
+      !templateId.includes('your_') &&
+      !publicKey.includes('your_') &&
+      !publicKey.includes('@'),
   );
 }
 
 export async function sendContactEnquiry(enquiry) {
-  if (!emailJsIsConfigured()) {
-    await new Promise((resolve) => {
-      window.setTimeout(resolve, 900);
-    });
-
-    return {
-      success: true,
-      demoMode: true,
-      enquiry,
-    };
+  if (!isEmailJsConfigured()) {
+    throw new Error(
+      'EmailJS is not configured correctly. Add the real Service ID, Template ID and Public Key to the .env file.',
+    );
   }
 
   const templateParameters = {
@@ -45,7 +40,7 @@ export async function sendContactEnquiry(enquiry) {
     school_name: school.name,
     submitted_at:
       enquiry.submittedAt ||
-      new Date().toISOString(),
+      new Date().toLocaleString(),
   };
 
   try {
@@ -64,13 +59,11 @@ export async function sendContactEnquiry(enquiry) {
       data: response,
     };
   } catch (error) {
-    console.error(
-      'EmailJS contact form error:',
-      error,
-    );
+    console.error('EmailJS error:', error);
 
     throw new Error(
-      'The enquiry could not be sent. Please try again or contact the school directly.',
+      error?.text ||
+        'The enquiry could not be sent. Please try again.',
     );
   }
 }
