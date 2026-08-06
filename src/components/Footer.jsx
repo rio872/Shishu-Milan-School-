@@ -309,20 +309,7 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* WhatsApp button */}
-      <a
-        href={
-          hasWhatsapp
-            ? `https://wa.me/${whatsappNumber}`
-            : '#contact'
-        }
-        target={hasWhatsapp ? '_blank' : undefined}
-        rel={hasWhatsapp ? 'noopener noreferrer' : undefined}
-        className="fixed bottom-5 left-5 z-30 grid size-14 place-items-center rounded-full bg-emerald-500 text-white shadow-2xl transition hover:-translate-y-1 hover:bg-emerald-600"
-        aria-label="Chat with the school on WhatsApp"
-      >
-        <MessageCircle size={27} aria-hidden="true" />
-      </a>
+      
 
       {/* Back-to-top button */}
       {showTop && (

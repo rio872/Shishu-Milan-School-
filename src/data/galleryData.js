@@ -77,17 +77,7 @@ export const galleryItems = [
       'Students performing music during a school cultural program',
     featured: false,
   },
-  {
-    id: 7,
-    image: '/gallery/science-exhibition.jpg',
-    title: 'Science Exhibition',
-    category: 'Science and Technology',
-    description:
-      'Students display creative scientific models and explain practical ideas during the school science exhibition.',
-    altText:
-      'Students presenting science models during a school exhibition',
-    featured: true,
-  },
+ 
   {
     id: 8,
     image: '/gallery/computer-learning.jpg',

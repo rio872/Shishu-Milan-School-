@@ -1407,22 +1407,8 @@ export function ContactCTA() {
             Call Us
           </a>
 
-          {whatsappNumber && (
-            <a
-              href={`https://wa.me/${whatsappNumber}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-white/35 px-7 font-extrabold text-white transition hover:-translate-y-1 hover:bg-white hover:text-navy-950"
-            >
-              <MessageCircle
-                size={18}
-                aria-hidden="true"
-              />
-
-              Chat on WhatsApp
-            </a>
-          )}
-
+         
+       
           <a
             href={`mailto:${
               school.email || ''

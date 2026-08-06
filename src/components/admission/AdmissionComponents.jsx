@@ -778,7 +778,7 @@ export function StudentInformationStep({
           onChange={onChange}
           error={errors.studentName}
           required
-          placeholder="Enter student’s full name"
+          
           autoComplete="name"
         />
 
@@ -842,7 +842,7 @@ export function StudentInformationStep({
           onChange={onChange}
           error={errors.studentAddress}
           required
-          placeholder="Enter the student’s full current address"
+         
         />
       </div>
 
@@ -2338,21 +2338,7 @@ export function AdmissionHelp() {
             Call Admission Office
           </a>
 
-          {whatsappNumber && (
-            <a
-              href={`https://wa.me/${whatsappNumber}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-[50px] items-center justify-center gap-2 rounded-full border border-white/25 px-7 font-extrabold text-white transition hover:bg-white hover:text-navy-950"
-            >
-              <MessageCircle
-                size={18}
-                aria-hidden="true"
-              />
-
-              Chat on WhatsApp
-            </a>
-          )}
+          
 
           <a
             href={

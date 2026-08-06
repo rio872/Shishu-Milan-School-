@@ -55,21 +55,7 @@ export const contactInfoCards = [
     href: '',
     linkText: '',
   },
-  {
-    id: 5,
-    icon: 'whatsapp',
-    title: 'WhatsApp',
-    detail:
-      school.whatsappDisplay ||
-      school.whatsapp ||
-      '[WHATSAPP NUMBER]',
-    subtext:
-      'Chat with the school office',
-    href: whatsappNumber
-      ? `https://wa.me/${whatsappNumber}`
-      : '',
-    linkText: 'Chat now',
-  },
+ 
 ];
 
 export const departmentContacts = [
