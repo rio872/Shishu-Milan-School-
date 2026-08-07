@@ -381,55 +381,6 @@ function FacilitiesGallery() {
 
   return (
     <>
-      <section className="bg-slate-50 py-20 sm:py-24">
-        <div className="section-shell">
-          <SectionHeading
-            eyebrow="Explore our school"
-            title="Facilities Gallery"
-            description="View some of the spaces and resources that support teaching, learning, safety, creativity and student development."
-            centered
-          />
-
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{
-              once: true,
-              amount: 0.1,
-            }}
-            className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
-          >
-            {facilityGallery.map((image, index) => (
-              <motion.button
-                key={image.src}
-                type="button"
-                variants={reveal}
-                whileHover={{
-                  y: -5,
-                }}
-                onClick={() => setSelectedIndex(index)}
-                className="group relative overflow-hidden rounded-3xl text-left shadow-md"
-                aria-label={`Open ${image.title} image`}
-                aria-haspopup="dialog"
-              >
-                <ImageWithFallback
-                  src={image.src}
-                  alt={image.alt}
-                  className="h-[280px] w-full"
-                  imageClassName="object-cover transition duration-700 group-hover:scale-110"
-                />
-
-                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-navy-950/90 via-transparent to-transparent p-5">
-                  <p className="font-display text-lg font-bold text-white">
-                    {image.title}
-                  </p>
-                </div>
-              </motion.button>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       <AnimatePresence>
         {selectedImage && (
