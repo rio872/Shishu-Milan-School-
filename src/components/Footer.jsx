@@ -149,7 +149,7 @@ export default function Footer() {
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/company/YOUR_LINKEDIN_PAGE',
+      url: 'https://www.linkedin.com/company/shishu-milan-english-school/?viewAsMember=true',
       icon: Linkedin,
     },
   ];
