@@ -11,7 +11,7 @@ export default function About() {
             <img
                src="/about-school.png"
   alt="Students of Shishu Milan English School"
-  className="h-[520px] w-full object-cover"
+  className="h-[530px] w-full object-cover"
             />
           </div>
           <div className="absolute -bottom-8 -right-2 max-w-[280px] rounded-3xl bg-navy-900 p-6 text-white shadow-2xl sm:right-8">
