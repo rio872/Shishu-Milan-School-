@@ -457,7 +457,7 @@ export default function AboutPage() {
 
       <main>
        {/* About page hero */}
-<section className="relative isolate min-h-[600px] overflow-hidden text-white">
+<section className="relative isolate min-h-[610px] overflow-hidden text-white">
   {/* Background image */}
   <img
     src={school.aboutHeroImage || '/about-hero.jpg'}
@@ -551,7 +551,7 @@ export default function AboutPage() {
 
               <motion.div variants={reveal}>
                 <ImageWithFallback
-                  src={school.aboutImageTwo || '/about-school-2.jpg'}
+                  src={school.aboutImageTwo || 'school-.png'}
                   alt={`School activities at ${school.name}`}
                   className="h-[400px] rounded-[2rem] shadow-xl"
                 />
@@ -892,11 +892,11 @@ export default function AboutPage() {
               }}
               className="relative"
             >
-              <ImageWithFallback
-                src={school.aboutImageTwo || '/about-school-2.jpg'}
-                alt={`Learning environment at ${school.name}`}
-                className="h-[560px] rounded-[2.5rem] shadow-2xl"
-              />
+                <img
+  src={school.whyChooseImage}
+  alt={`Students learning at ${school.name}`}
+   className="h-[520px] w-full rounded-[2rem] object-cover"
+/>
 
               <div className="absolute bottom-6 left-6 right-6 rounded-3xl bg-navy-950/90 p-6 text-white backdrop-blur">
                 <p className="text-sm font-extrabold uppercase tracking-wider text-gold-400">
@@ -1012,55 +1012,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Facilities */}
-        <section className="bg-slate-50 py-20 sm:py-24">
-          <div className="section-shell">
-            <SectionHeading
-              eyebrow="Learning environment"
-              title="Our School Facilities"
-              description="Our facilities support safe, practical, active and enjoyable learning experiences for students."
-              centered
-            />
-
-            <motion.div
-              variants={containerAnimation}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{
-                once: true,
-                amount: 0.15,
-              }}
-              className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
-            >
-              {facilities.map((facility) => {
-                const Icon = facility.icon;
-
-                return (
-                  <motion.article
-                    key={facility.title}
-                    variants={reveal}
-                    whileHover={{
-                      y: -6,
-                    }}
-                    className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-xl"
-                  >
-                    <span className="grid size-12 place-items-center rounded-2xl bg-gold-400 text-navy-950">
-                      <Icon size={23} aria-hidden="true" />
-                    </span>
-
-                    <h3 className="mt-5 font-display text-xl font-bold text-navy-950">
-                      {facility.title}
-                    </h3>
-
-                    <p className="mt-3 text-sm leading-7 text-slate-600">
-                      {facility.description}
-                    </p>
-                  </motion.article>
-                );
-              })}
-            </motion.div>
-          </div>
-        </section>
+        
 
         {/* Admission CTA */}
         <section className="relative isolate overflow-hidden bg-royal-600 py-20 text-white">

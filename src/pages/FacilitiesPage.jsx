@@ -519,9 +519,9 @@ export default function FacilitiesPage() {
 
       <main>
         {/* Hero */}
-        <section className="relative isolate min-h-[580px] overflow-hidden bg-navy-950 text-white">
+        <section className="relative isolate min-h-[600px] overflow-hidden bg-navy-950 text-white">
           <img
-            src="/facilities/facilities-hero.jpg"
+            src="/facilities-hero.jpg"
             alt={`Facilities and students at ${school.name}`}
             className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
             onError={(event) => {

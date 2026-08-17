@@ -15,22 +15,7 @@ export const facilityCards = [
     description:
       'A supervised computer laboratory where students develop practical digital and technology skills.',
   },
-  {
-    id: 'science-laboratory',
-    title: 'Science Laboratory',
-    icon: 'FlaskConical',
-    image: '/facilities/science-lab.jpg',
-    description:
-      'A safe practical learning space for experiments, scientific observation and activity-based education.',
-  },
-  {
-    id: 'library',
-    title: 'Library',
-    icon: 'Library',
-    image: '/facilities/library.jpg',
-    description:
-      'A quiet reading environment with academic books, reference materials, stories and educational resources.',
-  },
+  
   {
     id: 'sports-playground',
     title: 'Playground',
@@ -47,14 +32,7 @@ export const facilityCards = [
     description:
       'Transportation support on selected routes with a focus on student safety and regular vehicle maintenance.',
   },
-  {
-    id: 'cafeteria',
-    title: 'Cafeteria',
-    icon: 'Utensils',
-    image: '/facilities/cafeteria.jpg',
-    description:
-      'A clean and organised refreshment area where students can eat comfortably during school hours.',
-  },
+
   {
     id: 'safety-security',
     title: 'CCTV and Security',
@@ -71,14 +49,7 @@ export const facilityCards = [
     description:
       'Basic first-aid support is available for minor injuries and immediate student health needs.',
   },
-  {
-    id: 'drinking-water',
-    title: 'Clean Drinking Water',
-    icon: 'Droplets',
-    image: '/facilities/drinking-water.jpg',
-    description:
-      'Students have access to clean drinking water during lessons, activities and break periods.',
-  },
+ 
   {
     id: 'activity-hall',
     title: 'Activity Hall',
@@ -87,14 +58,7 @@ export const facilityCards = [
     description:
       'A flexible space for assemblies, presentations, cultural activities, competitions and school events.',
   },
-  {
-    id: 'sanitation',
-    title: 'Sanitation Facilities',
-    icon: 'Sparkles',
-    image: '/facilities/sanitation.jpg',
-    description:
-      'Clean and regularly maintained sanitation facilities support student comfort, hygiene and wellbeing.',
-  },
+ 
 ];
 
 export const facilityDetails = [
@@ -114,38 +78,8 @@ export const facilityDetails = [
       'Supervised and safe computer usage',
     ],
   },
-  {
-    id: 'science-laboratory',
-    eyebrow: 'Learning through experiments',
-    title: 'Science Laboratory',
-    icon: 'FlaskConical',
-    image: '/facilities/science-lab.jpg',
-    description:
-      'Our science laboratory supports practical understanding by allowing students to observe, test and explore scientific ideas.',
-    points: [
-      'Practical science experiments',
-      'Useful scientific equipment',
-      'Safe laboratory environment',
-      'Teacher supervision',
-      'Activity-based learning',
-    ],
-  },
-  {
-    id: 'library',
-    eyebrow: 'Reading and knowledge',
-    title: 'School Library',
-    icon: 'Library',
-    image: '/facilities/library.jpg',
-    description:
-      'The library encourages reading, independent learning, research and the development of lifelong reading habits.',
-    points: [
-      'Academic books',
-      'Reference materials',
-      'Storybooks',
-      'Newspapers and magazines',
-      'Quiet reading environment',
-    ],
-  },
+  
+ 
   {
     id: 'sports-playground',
     eyebrow: 'Healthy student development',
@@ -179,20 +113,19 @@ export const facilityDetails = [
     ],
   },
   {
-    id: 'safety-security',
-    eyebrow: 'A protected learning environment',
-    title: 'Safety and Security',
-    icon: 'ShieldCheck',
-    image: '/facilities/security.jpg',
-    description:
-      'The school maintains safety procedures and responsible supervision to create a secure environment for students, staff and visitors.',
-    points: [
-      'CCTV monitoring',
-      'Secure school entrance',
-      'Visitor management',
-      'Teacher supervision',
-      'Emergency procedures',
-      'First-aid support',
+  id: 'smart-classroom',
+  eyebrow: 'Technology-enhanced learning',
+  title: 'Smart Classrooms',
+  icon: 'Monitor',
+  image: '/facilities/smart-classroom.jpg',
+  description:
+    'Our smart classrooms use digital tools and visual learning resources to make lessons more interactive, engaging and easy to understand.',
+  points: [
+    'Digital learning resources',
+    'Interactive teaching methods',
+    'Audio-visual learning support',
+    'Engaging classroom activities',
+    'Technology-supported lessons',
     ],
   },
 ];

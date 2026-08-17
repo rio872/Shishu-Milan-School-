@@ -704,33 +704,24 @@ function VideoGallery() {
           className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3"
         >
           {galleryVideos.map((video) => (
-            <motion.button
+            <motion.article
               key={video.id}
-              type="button"
-              variants={reveal}
-              onClick={() =>
-                setSelectedVideo(video)
-              }
-              className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 text-left transition hover:-translate-y-2 hover:bg-white/10"
+             
+              className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 text-left transition hover:-translate-y-2 hover:bg-white/10"
             >
-              <div className="relative aspect-video overflow-hidden">
-                <img
-                  src={video.thumbnail}
-                  alt={video.title}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
-
-                <div className="absolute inset-0 bg-navy-950/35" />
-
-                <span className="absolute left-1/2 top-1/2 grid size-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-gold-400 text-navy-950 shadow-xl transition group-hover:scale-110">
-                  <Play
-                    size={25}
-                    fill="currentColor"
-                    aria-hidden="true"
-                  />
-                </span>
-              </div>
+              <div className="aspect-video overflow-hidden bg-navy-950">
+  <video
+    src={video.videoUrl}
+    poster={video.thumbnail}
+    controls
+    preload="metadata"
+    playsInline
+    className="h-full w-full object-cover"
+    aria-label={video.title}
+  >
+    Your browser does not support the video element.
+  </video>
+</div>
 
               <div className="p-6">
                 <h3 className="font-display text-2xl font-bold">
@@ -741,7 +732,7 @@ function VideoGallery() {
                   {video.description}
                 </p>
               </div>
-            </motion.button>
+            </motion.article>
           ))}
         </motion.div>
       </div>

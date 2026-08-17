@@ -1,41 +1,65 @@
 export const galleryCategories = [
   'All',
-  'Classroom Activities',
+  'Monthly Rewards',
+  'Field Visit',
   'Sports',
   'Cultural Programs',
   'Science and Technology',
-  'Educational Tours',
-  'Celebrations',
-  'School Events',
-  'Student Projects',
+  'Health Camp',
+  'Summer Day',
+  'Little Icon',
+  'Horse Riding',
+  'School Election'
 ];
 
 export const galleryItems = [
-  {
+    {
     id: 1,
-    image: '/gallery/classroom-reading.jpg',
-    title: 'Interactive Reading Session',
-    category: 'Classroom Activities',
+    image: '/public/reward.jpg',
+    title: 'Monthly Consistent Student Reward ',
+    category: 'Monthly Rewards',
     description:
-      'Students improve their reading, communication and comprehension skills through an interactive classroom activity.',
+      'A wonderful day of learning curiosity and hands on experience.',
+    altText:
+      'Students participating in an interactive reading session inside a classroom',
+    featured: false,
+  },
+    {
+    id: 2,
+    image: '/public/reward-1.jpg',
+    title: 'Dancer of the Month Reward',
+    category: 'Monthly Rewards',
+    description:
+      'A wonderful day of learning curiosity and hands on experience.',
     altText:
       'Students participating in an interactive reading session inside a classroom',
     featured: false,
   },
   {
-    id: 2,
-    image: '/gallery/classroom-group-work.jpg',
-    title: 'Collaborative Group Learning',
-    category: 'Classroom Activities',
+    id: 3,
+    image: '/public/outdoor-learning.jpg',
+    title: 'Outdoor Learning',
+    category: 'Field Visit',
     description:
-      'Students work together to solve problems, exchange ideas and develop teamwork skills.',
+      'A wonderful day of learning curiosity and hands on experience.',
+    altText:
+      'Students participating in an interactive reading session inside a classroom',
+    featured: true,
+  },
+  {
+    id: 4,
+    image: '/public/collaborative-group-learning.jpg',
+    title: 'Collaborative Group Learning',
+    category: 'Field Visit',
+    description:
+      'Learning together Sharing ideas, and growing together.',
     altText:
       'Students working together during a classroom group activity',
     featured: false,
   },
   {
-    id: 3,
-    image: '/gallery/sports-day-race.jpg',
+    id: 5,
+    image: '/public/sports-day.jpg',
     title: 'Annual Sports Day',
     category: 'Sports',
     description:
@@ -45,9 +69,9 @@ export const galleryItems = [
     featured: true,
   },
   {
-    id: 4,
-    image: '/gallery/football-match.jpg',
-    title: 'Inter-House Football Match',
+    id: 6,
+    image: '/public/inter-school.jpg',
+    title: 'Inter-School Football Match',
     category: 'Sports',
     description:
       'Students demonstrate teamwork, discipline and sportsmanship during an inter-house football competition.',
@@ -56,8 +80,8 @@ export const galleryItems = [
     featured: false,
   },
   {
-    id: 5,
-    image: '/gallery/cultural-dance.jpg',
+    id: 7,
+    image: '/public/cultural-dance.jpg',
     title: 'Traditional Cultural Dance',
     category: 'Cultural Programs',
     description:
@@ -67,8 +91,8 @@ export const galleryItems = [
     featured: true,
   },
   {
-    id: 6,
-    image: '/gallery/cultural-music.jpg',
+    id: 8,
+    image: '/public/cultural-music.jpg',
     title: 'Student Musical Performance',
     category: 'Cultural Programs',
     description:
@@ -79,8 +103,19 @@ export const galleryItems = [
   },
  
   {
-    id: 8,
-    image: '/gallery/computer-learning.jpg',
+    id: 9,
+    image: '/public/computer-learning.jpg',
+    title: 'Digital Learning Session',
+    category: 'Science and Technology',
+    description:
+      'Students develop computer knowledge and digital skills through practical laboratory activities.',
+    altText:
+      'Students learning computer skills inside the school computer laboratory',
+    featured: true,
+  },
+   {
+    id: 10,
+    image: '/public/computer-learning-1.jpg',
     title: 'Digital Learning Session',
     category: 'Science and Technology',
     description:
@@ -90,118 +125,133 @@ export const galleryItems = [
     featured: false,
   },
   {
-    id: 9,
-    image: '/gallery/educational-tour.jpg',
-    title: 'Educational Field Visit',
-    category: 'Educational Tours',
+    id: 11,
+    image: '/public/dental.jpg',
+    title: 'Dental Check-Up Program',
+    category: 'Health Camp',
     description:
-      'Students connect classroom knowledge with real-life observation during an educational field visit.',
+      'Students receive basic dental screening and guidance on maintaining healthy teeth and good oral hygiene habits..',
     altText:
       'Students and teachers participating in an educational field visit',
-    featured: true,
+    featured: false,
   },
   {
-    id: 10,
-    image: '/gallery/museum-visit.jpg',
-    title: 'Museum Learning Tour',
-    category: 'Educational Tours',
+    id: 12,
+    image: '/public/blood.jpg',
+    title: 'Blood Group Identification Program',
+    category: 'Health Camp',
     description:
-      'Students learn about history, culture and heritage during an educational museum visit.',
+      'Students take part in a health awareness activity to identify their blood group and understand the importance of basic health information..',
     altText:
       'Students visiting a museum as part of an educational school tour',
     featured: false,
   },
   {
-    id: 11,
-    image: '/gallery/school-anniversary.jpg',
-    title: 'School Anniversary Celebration',
-    category: 'Celebrations',
+    id: 13,
+    image: '/public/summer-day-1.jpg',
+    title: 'Summer Day Celebration',
+    category: 'Summer Day',
     description:
-      'Students, teachers and parents celebrate the school anniversary with performances and special activities.',
+      'Making Summer memories filled with laughter and joy.',
     altText:
       'School anniversary celebration with students and teachers',
     featured: true,
   },
   {
-    id: 12,
-    image: '/gallery/festival-celebration.jpg',
-    title: 'Festival Celebration',
-    category: 'Celebrations',
+    id: 14,
+    image: '/public/summer-day-2.jpg',
+    title: 'Summer Day Celebration',
+    category: 'Summer Day',
     description:
-      'The school community celebrates Nepalese festivals while learning about tradition, respect and unity.',
+      'A joyful summer day filled with fun, laughter, and memories.',
     altText:
       'Students celebrating a Nepalese festival at school',
     featured: false,
   },
   {
-    id: 13,
-    image: '/gallery/annual-program.jpg',
-    title: 'Annual School Program',
-    category: 'School Events',
+    id: 15,
+    image: '/public/little-icon-1.jpg',
+    title: 'Annual Little Icon Program',
+    category: 'Little Icon',
     description:
-      'The annual program brings together students, parents and teachers for performances and school achievements.',
+      'Students showcase confidence, talent, creativity, and personality through fun stage activities and performance.',
     altText:
       'Students participating in the annual school program',
     featured: false,
   },
   {
-    id: 14,
-    image: '/gallery/award-ceremony.jpg',
-    title: 'Award and Recognition Ceremony',
-    category: 'School Events',
+    id: 16,
+    image: '/public/little-icon-2.jpg',
+    title: 'Annual Little Icon Program',
+    category: 'Little Icon',
     description:
-      'Students receive certificates and awards for academic achievement, discipline and extracurricular participation.',
+      'A joyful event where young students present their talents, build confidence, and enjoy participating in school activities.',
     altText:
       'Student receiving an award during a school recognition ceremony',
-    featured: true,
-  },
-  {
-    id: 15,
-    image: '/gallery/student-art-project.jpg',
-    title: 'Creative Art Project',
-    category: 'Student Projects',
-    description:
-      'Students express creativity through colourful artwork, craft activities and classroom projects.',
-    altText:
-      'Student displaying a creative art and craft project',
     featured: false,
   },
   {
-    id: 16,
-    image: '/gallery/robotics-project.jpg',
-    title: 'Technology Project Presentation',
-    category: 'Student Projects',
+    id: 17,
+    image: '/public/Horse-1.jpg',
+    title: 'Horse Riding Adventure',
+    category: 'Horse Riding',
     description:
-      'Students present a practical technology project developed through research, teamwork and experimentation.',
-    altText:
-      'Students presenting a technology and robotics school project',
-    featured: false,
+      'Students experience horse riding as a fun outdoor activity that encourages courage, discipline, and physical development.',
+    
   },
+  {
+    id: 18,
+    image: '/public/Horse-2.jpg',
+    title: 'Horse Riding Adventure',
+    category: 'Horse Riding',
+    description:
+      'Student enjoy horse riding while developing confidence, balance coordination, and sense of adventure.',
+    
+  },
+  {
+    id: 19,
+    image: '/public/election-1.jpg',
+    title: 'Student Council Election',
+    category: 'School Election',
+    description:
+      'Students take part in the school election process, learning about leadership, responsibility, teamwork, and democratic participation.',
+    
+  },
+  {
+    id: 20,
+    image: '/public/election-2.jpg',
+    title: 'Young Leaders in Action',
+    category: 'School Election',
+    description:
+      'Student confidently present their ideas and Participate in voting to choose respectives for the school community.',
+   
+  },
+
 ];
 
 export const galleryVideos = [
   {
     id: 1,
-    thumbnail: '/gallery/sports-day-video.jpg',
+    thumbnail: '/gallery/videos/sports-day.jpg',
     title: 'Annual Sports Day Highlights',
     description:
       'Watch the exciting races, team games and student performances from our Annual Sports Day.',
-    videoUrl: 'https://www.youtube.com/embed/VIDEO_ID_1',
+    videoUrl: "/gallery/videos/sports-day.mp4",
   },
   {
     id: 2,
-    thumbnail: '/gallery/cultural-program-video.jpg',
+    thumbnail: '/gallery/videos/cultural-program.jpg',
     title: 'Cultural Program Highlights',
     description:
-      'A collection of student dance, music and cultural performances from our school program.',
-    videoUrl: 'https://www.youtube.com/embed/VIDEO_ID_2',
+      'Students celebrate culture through traditional dance, building confidence, teamwork, and respect for traditions.',
+    videoUrl: '/gallery/videos/cultural-program.mp4',
   },
   {
     id: 3,
-    thumbnail: '/gallery/science-exhibition-video.jpg',
-    title: 'Science Exhibition Highlights',
+    thumbnail: '/gallery/videos/music-photo.jpg',
+    title: 'Music Class Highlights',
     description:
-      'Students explain their creative models, experiments and practical scientific projects.',
-    videoUrl: 'https://www.youtube.com/embed/VIDEO_ID_3',
+      'Students explore music through singing, instruments, and performances while developing creativity and confidence.',
+    videoUrl: '/gallery/videos/music-video.mp4',
   },
 ];

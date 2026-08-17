@@ -566,14 +566,14 @@ export default function AcademicsPage() {
 
       <main>
         {/* Academics hero */}
-        <section className="relative isolate min-h-[580px] overflow-hidden bg-navy-950 text-white">
+        <section className="relative isolate min-h-[610px] overflow-hidden bg-navy-950 text-white">
           <img
             src={
               school.academicsHeroImage ||
               '/academics-hero.jpg'
             }
             alt={`${school.name} students participating in academic learning`}
-            className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
+            className="absolute inset-0 -z-30 h-[690px] w-full object-cover object-center"
           />
 
           <div className="absolute inset-0 -z-20 bg-gradient-to-r from-navy-950/95 via-navy-950/80 to-navy-950/35" />

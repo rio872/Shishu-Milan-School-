@@ -24,7 +24,11 @@ export const school = {
 
   aboutHeroImage: '/about-hero.png',
   aboutImageOne: '/school-1.png',
-  aboutImageTwo: '/about-school-2.jpg', 
+  aboutImageTwo: '/school-2.png', 
+   whyChooseImage: '/why-choose-school.jpg',
+  academicsHeroImage: '/academics-hero.jpg',
+  academicCalendarFile: '/academic-calendar.pdf',
+  facilities:'facilities-hero.jpg',
 
   phone: '01-5128064',
   email: 'shishu20649@gmail.com',
@@ -40,7 +44,7 @@ export const school = {
   academicCalendarFile: '/academic-calendar.pdf',
   whatsapp: '9779851005539',
 
-  galleryHeroImage: '/gallery/gallery-hero.jpg',
+  galleryHeroImage: '/public/gallery-hero.jpg',
 
   mapEmbed:
     'https://www.google.com/maps?q=Shishu+Milan+English+School,+Budhanilkantha-13,+Chunikhel,+Nepal&output=embed',
@@ -218,7 +222,7 @@ export const galleryImages = [
     label: 'Interactive Classroom',
   },
   {
-    src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=85',
+    src: '/happy-learning.jpg',
     alt: 'Young student reading and learning at school',
     label: 'Happy Learning',
   },
