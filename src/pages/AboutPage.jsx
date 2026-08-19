@@ -33,6 +33,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { school } from '../data/schoolData';
 
+/* --------------------------------------------------
+   Animations
+-------------------------------------------------- */
+
 const reveal = {
   hidden: {
     opacity: 0,
@@ -56,6 +60,10 @@ const containerAnimation = {
     },
   },
 };
+
+/* --------------------------------------------------
+   Image With Fallback
+-------------------------------------------------- */
 
 function ImageWithFallback({
   src,
@@ -96,7 +104,7 @@ function ImageWithFallback({
         <div className="absolute inset-0 animate-pulse bg-slate-200" />
       )}
 
-     <img
+      <img
         src={src}
         alt={alt}
         loading={eager ? 'eager' : 'lazy'}
@@ -104,12 +112,16 @@ function ImageWithFallback({
         onError={() => setFailed(true)}
         style={imageStyle}
         className={`h-full w-full transition duration-700 ${imageClassName} ${
-            loaded ? 'opacity-100' : 'opacity-0'
+          loaded ? 'opacity-100' : 'opacity-0'
         }`}
-        />
+      />
     </div>
   );
 }
+
+/* --------------------------------------------------
+   Section Heading
+-------------------------------------------------- */
 
 function SectionHeading({
   eyebrow,
@@ -126,7 +138,11 @@ function SectionHeading({
         once: true,
         amount: 0.25,
       }}
-      className={centered ? 'mx-auto max-w-3xl text-center' : 'max-w-3xl'}
+      className={
+        centered
+          ? 'mx-auto max-w-3xl text-center'
+          : 'max-w-3xl'
+      }
     >
       <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-royal-600">
         {eyebrow}
@@ -145,12 +161,17 @@ function SectionHeading({
   );
 }
 
+/* --------------------------------------------------
+   Animated Counter
+-------------------------------------------------- */
+
 function AnimatedCounter({
   value,
   suffix = '',
   prefix = '',
 }) {
   const counterRef = useRef(null);
+
   const isVisible = useInView(counterRef, {
     once: true,
     amount: 0.6,
@@ -165,6 +186,7 @@ function AnimatedCounter({
 
     let animationFrame;
     let startTime;
+
     const duration = 1300;
 
     const animate = (time) => {
@@ -172,17 +194,25 @@ function AnimatedCounter({
         startTime = time;
       }
 
-      const progress = Math.min((time - startTime) / duration, 1);
-      const nextValue = Math.floor(progress * value);
+      const progress = Math.min(
+        (time - startTime) / duration,
+        1,
+      );
+
+      const nextValue = Math.floor(
+        progress * value,
+      );
 
       setCount(nextValue);
 
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
+        animationFrame =
+          requestAnimationFrame(animate);
       }
     };
 
-    animationFrame = requestAnimationFrame(animate);
+    animationFrame =
+      requestAnimationFrame(animate);
 
     return () => {
       cancelAnimationFrame(animationFrame);
@@ -197,6 +227,10 @@ function AnimatedCounter({
     </span>
   );
 }
+
+/* --------------------------------------------------
+   Timeline
+-------------------------------------------------- */
 
 const timelineItems = [
   {
@@ -225,6 +259,10 @@ const timelineItems = [
   },
 ];
 
+/* --------------------------------------------------
+   Mission Cards
+-------------------------------------------------- */
+
 const missionCards = [
   {
     title: 'Our Mission',
@@ -245,6 +283,10 @@ const missionCards = [
     icon: Lightbulb,
   },
 ];
+
+/* --------------------------------------------------
+   Core Values
+-------------------------------------------------- */
 
 const coreValues = [
   {
@@ -281,6 +323,10 @@ const coreValues = [
   },
 ];
 
+/* --------------------------------------------------
+   Why Choose
+-------------------------------------------------- */
+
 const reasons = [
   'Experienced and qualified teachers',
   'Safe, caring and student-friendly environment',
@@ -291,6 +337,10 @@ const reasons = [
   'Strong communication with parents',
   'Focus on discipline and moral values',
 ];
+
+/* --------------------------------------------------
+   Achievements
+-------------------------------------------------- */
 
 const achievementCards = [
   {
@@ -325,9 +375,15 @@ const achievementCards = [
   },
 ];
 
+/* --------------------------------------------------
+   Leadership / Staff
+-------------------------------------------------- */
+
 const leadershipMembers = [
   {
-    name: school.chairpersonName || 'RADHE SHYAM SHRESTHA',
+    name:
+      school.chairpersonName ||
+      'RADHE SHYAM SHRESTHA',
     position: 'Chairperson',
     image: '/chairperson.png',
   },
@@ -339,7 +395,7 @@ const leadershipMembers = [
   {
     name: 'ROSY SHRESTHA',
     position: 'Vice Principal',
-    image: '/vice principle.jpg',
+    image: '/vice-principal.jpg',
   },
   {
     name: 'BUDDHA GOLAY',
@@ -347,54 +403,240 @@ const leadershipMembers = [
     image: '/coordinator.jpg',
   },
   {
-    name: 'School Support Team',
+    name: 'Romi Shrestha',
+    position: 'Account Head',
+    image: '/account-head.jpg',
+  },
+
+  /* Add your remaining teachers here */
+
+  {
+    name: 'Ranjana Dhahal',
+    position: 'Nepali Teacher',
+    image: '/staff/nepali.jpg',
+  },
+  {
+    name: 'Manish Baral',
+    position: 'Computer Teacher',
+    image: '/staff/computer.jpg',
+  },
+  {
+    name: 'Madan',
+    position: 'Science Teacher',
+    image: '/staff/science.jpg',
+  },
+  {
+    name: 'Ritesh Kuikel',
+    position: 'Health Teacher',
+    image: '/staff/health.jpg',
+  },
+  
+  {
+    name: 'Namrata Shiwakoti',
+    position: 'Secondary Teacher',
+    image: '/staff/staff-5.jpg',
+  },
+  
+  {
+    name: 'Sunita Thami',
+    position: 'Mathematics Teacher',
+    image: '/staff/staff-7.jpg',
+  },
+   {
+    name: 'Gautam Magar',
+    position: 'English Teacher',
+    image: '/staff/staff-6.jpg',
+  },
+  {
+    name: 'Sajani Shrestha',
+    position: 'Science Teacher',
+    image: '/staff/staff-8.jpg',
+  },
+  {
+    name: 'Srijana Shrestha',
+    position: 'Computer Teacher',
+    image: '/staff/staff-9.jpg',
+  },
+  {
+    name: 'Kumari Tamang',
     position: 'Administrative Staff',
-    image: '/administration.jpg',
+    image: '/staff/staff-10.jpg',
+  },
+  {
+    name: 'Puja Sharma Akangme',
+    position: 'Administrative Staff',
+    image: '/staff/staff-11.jpg',
+  },
+  {
+    name: 'Phoolmaya Shrestha',
+    position: 'Administrative Staff',
+    image: '/staff/staff-12.jpg',
+  },
+  {
+    name: 'Binita Basnet',
+    position: 'Administrative Staff',
+    image: '/staff/staff-13.jpg',
+  },
+  {
+    name: 'Hema Gubhaju',
+    position: 'Administrative Staff',
+    image: '/staff/staff-14.jpg',
+  },
+  {
+    name: 'Mira Shrestha',
+    position: 'Administrative Staff',
+    image: '/staff/staff-15.jpg',
+  },
+  {
+    name: 'Kamala Tamang',
+    position: 'Administrative Staff',
+    image: '/staff/staff-16.jpg',
+  },
+  {
+    name: 'Chanda Dhakal Shrestha',
+    position: 'Administrative Staff',
+    image: '/staff/staff-17.jpg',
+  },
+  {
+    name: 'Goma Shrestha',
+    position: 'Administrative Staff',
+    image: '/staff/staff-18.jpg',
+  },
+  {
+    name: 'Anjana Shrestha',
+    position: 'Administrative Staff',
+    image: '/staff/staff-19.jpg',
+  },
+  {
+    name: 'Sita Maya Shrestha',
+    position: 'Administrative Staff',
+    image: '/staff/staff-20.jpg',
+  },
+  {
+    name: 'Amit Shrestha',
+    position: 'ECA Incharge',
+    image: '/staff/staff-21.jpg',
+  },
+  {
+    name: 'Sarmila Shrestha',
+    position: 'Administrative Staff',
+    image: '/staff/staff-22.jpg',
+  },
+  {
+    name: 'Ratna Maya Tamang',
+    position: 'Administrative Staff',
+    image: '/staff/staff-23.jpg',
+  },
+  {
+    name: 'Amrita Manandhar',
+    position: 'Administrative Staff',
+    image: '/staff/staff-24.jpg',
+  },
+  {
+    name: 'Ram Tamang',
+    position: 'Administrative Staff',
+    image: '/staff/staff-25.jpg',
+  },
+  {
+    name: 'Nisha Shrestha',
+    position: 'Administrative Staff',
+    image: '/staff/staff-26.jpg',
+  },
+  {
+    name: 'STAFF NAME',
+    position: 'Administrative Staff',
+    image: '/staff/staff-27.jpg',
+  },
+  {
+    name: 'STAFF NAME',
+    position: 'Administrative Staff',
+    image: '/staff/staff-28.jpg',
+  },
+  {
+    name: 'STAFF NAME',
+    position: 'Administrative Staff',
+    image: '/staff/staff-29.jpg',
+  },
+  {
+    name: 'STAFF NAME',
+    position: 'Administrative Staff',
+    image: '/staff/staff-30.jpg',
+  },
+  {
+    name: 'STAFF NAME',
+    position: 'Administrative Staff',
+    image: '/staff/staff-31.jpg',
+  },
+  {
+    name: 'STAFF NAME',
+    position: 'Administrative Staff',
+    image: '/staff/staff-32.jpg',
+  },
+  {
+    name: 'STAFF NAME',
+    position: 'Administrative Staff',
+    image: '/staff/staff-33.jpg',
   },
 ];
+
+/* --------------------------------------------------
+   Facilities
+-------------------------------------------------- */
 
 const facilities = [
   {
     title: 'Library',
-    description: 'A quiet learning space with useful academic and general reading materials.',
+    description:
+      'A quiet learning space with useful academic and general reading materials.',
     icon: Library,
   },
   {
     title: 'Computer Laboratory',
-    description: 'Computer learning facilities that support digital skills and practical knowledge.',
+    description:
+      'Computer learning facilities that support digital skills and practical knowledge.',
     icon: Computer,
   },
   {
     title: 'Science Laboratory',
-    description: 'Practical learning opportunities that help students understand scientific concepts.',
+    description:
+      'Practical learning opportunities that help students understand scientific concepts.',
     icon: FlaskConical,
   },
   {
     title: 'Smart Classrooms',
-    description: 'Classrooms supported by visual resources and modern teaching approaches.',
+    description:
+      'Classrooms supported by visual resources and modern teaching approaches.',
     icon: Monitor,
   },
   {
     title: 'Playground',
-    description: 'Space for physical development, games, teamwork and recreational activities.',
+    description:
+      'Space for physical development, games, teamwork and recreational activities.',
     icon: Trophy,
   },
   {
     title: 'Transportation',
-    description: 'School transportation support for safe and convenient student travel.',
+    description:
+      'School transportation support for safe and convenient student travel.',
     icon: Bus,
   },
   {
     title: 'CCTV and Security',
-    description: 'Safety measures that help create a secure environment for students and staff.',
+    description:
+      'Safety measures that help create a secure environment for students and staff.',
     icon: ShieldCheck,
   },
   {
     title: 'Cafeteria',
-    description: 'A clean area where students can enjoy refreshments during school hours.',
+    description:
+      'A clean area where students can enjoy refreshments during school hours.',
     icon: Utensils,
   },
 ];
+
+/* --------------------------------------------------
+   Statistics
+-------------------------------------------------- */
 
 const schoolStatistics = [
   {
@@ -419,7 +661,18 @@ const schoolStatistics = [
   },
 ];
 
+/* ==================================================
+   ABOUT PAGE
+================================================== */
+
 export default function AboutPage() {
+  const [showAllTeam, setShowAllTeam] =
+    useState(false);
+
+  /* ------------------------------------------------
+     SEO
+  ------------------------------------------------ */
+
   useEffect(() => {
     const previousTitle = document.title;
 
@@ -429,11 +682,18 @@ export default function AboutPage() {
       'meta[name="description"]',
     );
 
-    const oldDescription = description?.getAttribute('content');
+    const oldDescription =
+      description?.getAttribute('content');
 
     if (!description) {
-      description = document.createElement('meta');
-      description.setAttribute('name', 'description');
+      description =
+        document.createElement('meta');
+
+      description.setAttribute(
+        'name',
+        'description',
+      );
+
       document.head.appendChild(description);
     }
 
@@ -446,7 +706,10 @@ export default function AboutPage() {
       document.title = previousTitle;
 
       if (oldDescription) {
-        description.setAttribute('content', oldDescription);
+        description.setAttribute(
+          'content',
+          oldDescription,
+        );
       }
     };
   }, []);
@@ -456,79 +719,90 @@ export default function AboutPage() {
       <Header />
 
       <main>
-       {/* About page hero */}
-<section className="relative isolate min-h-[610px] overflow-hidden text-white">
-  {/* Background image */}
-  <img
-    src={school.aboutHeroImage || '/about-hero.jpg'}
-    alt={`${school.name} students and school activities`}
-    className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
-  />
+        {/* ==================================================
+            ABOUT HERO
+        ================================================== */}
 
-  {/* Dark overlay */}
-  <div className="absolute inset-0 -z-20 bg-gradient-to-r from-navy-950/95 via-navy-950/80 to-navy-950/40" />
+        <section className="relative isolate min-h-[610px] overflow-hidden text-white">
+          <img
+            src={
+              school.aboutHeroImage ||
+              '/about-hero.jpg'
+            }
+            alt={`${school.name} students and school activities`}
+            className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
+          />
 
-  {/* Optional dark background layer */}
-  <div className="absolute inset-0 -z-10 bg-navy-950/15" />
+          <div className="absolute inset-0 -z-20 bg-gradient-to-r from-navy-950/95 via-navy-950/80 to-navy-950/40" />
 
-  {/* Text content */}
-  <div className="section-shell relative z-10 flex min-h-[600px] items-center py-20">
-    <motion.div
-      variants={containerAnimation}
-      initial="hidden"
-      animate="visible"
-      className="max-w-3xl"
-    >
-      {/* Breadcrumb */}
-      <motion.nav
-        variants={reveal}
-        aria-label="Breadcrumb"
-        className="flex items-center gap-2 text-sm font-bold text-white/75"
-      >
-        <a
-          href="/"
-          className="flex items-center gap-2 transition hover:text-gold-400"
-        >
-          <Home size={16} aria-hidden="true" />
-          Home
-        </a>
+          <div className="absolute inset-0 -z-10 bg-navy-950/15" />
 
-        <ChevronRight size={16} aria-hidden="true" />
+          <div className="section-shell relative z-10 flex min-h-[600px] items-center py-20">
+            <motion.div
+              variants={containerAnimation}
+              initial="hidden"
+              animate="visible"
+              className="max-w-3xl"
+            >
+              <motion.nav
+                variants={reveal}
+                aria-label="Breadcrumb"
+                className="flex items-center gap-2 text-sm font-bold text-white/75"
+              >
+                <a
+                  href="/"
+                  className="flex items-center gap-2 transition hover:text-gold-400"
+                >
+                  <Home
+                    size={16}
+                    aria-hidden="true"
+                  />
 
-        <span className="text-gold-400">
-          About Us
-        </span>
-      </motion.nav>
+                  Home
+                </a>
 
-      {/* Established date */}
-      <motion.p
-        variants={reveal}
-        className="mt-10 text-sm font-extrabold uppercase tracking-[0.22em] text-gold-400"
-      >
-        Established in 2049 B.S.
-      </motion.p>
+                <ChevronRight
+                  size={16}
+                  aria-hidden="true"
+                />
 
-      {/* Page title */}
-      <motion.h1
-        variants={reveal}
-        className="mt-4 font-display text-5xl font-extrabold leading-tight sm:text-6xl lg:text-7xl"
-      >
-        About Us
-      </motion.h1>
+                <span className="text-gold-400">
+                  About Us
+                </span>
+              </motion.nav>
 
-      {/* Introduction */}
-      <motion.p
-        variants={reveal}
-        className="mt-6 max-w-2xl text-lg leading-8 text-white/85 sm:text-xl"
-      >
-        Discover the story, purpose, values and people behind{' '}
-        {school.name}, a trusted school community committed to quality
-        education and responsible student development.
-      </motion.p>
-    </motion.div>
-  </div>
-</section>
-        {/* Introduction */}
+              <motion.p
+                variants={reveal}
+                className="mt-10 text-sm font-extrabold uppercase tracking-[0.22em] text-gold-400"
+              >
+                Established in 2049 B.S.
+              </motion.p>
+
+              <motion.h1
+                variants={reveal}
+                className="mt-4 font-display text-5xl font-extrabold leading-tight sm:text-6xl lg:text-7xl"
+              >
+                About Us
+              </motion.h1>
+
+              <motion.p
+                variants={reveal}
+                className="mt-6 max-w-2xl text-lg leading-8 text-white/85 sm:text-xl"
+              >
+                Discover the story, purpose, values and
+                people behind {school.name}, a trusted
+                school community committed to quality
+                education and responsible student
+                development.
+              </motion.p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* ==================================================
+            INTRODUCTION
+        ================================================== */}
+
         <section className="bg-white py-20 sm:py-24">
           <div className="section-shell grid items-center gap-14 lg:grid-cols-2">
             <motion.div
@@ -541,9 +815,15 @@ export default function AboutPage() {
               variants={containerAnimation}
               className="relative grid grid-cols-2 gap-4"
             >
-              <motion.div variants={reveal} className="pt-12">
+              <motion.div
+                variants={reveal}
+                className="pt-12"
+              >
                 <ImageWithFallback
-                  src={school.aboutImageOne || '/school-1.png'}
+                  src={
+                    school.aboutImageOne ||
+                    '/school-1.png'
+                  }
                   alt={`Students learning at ${school.name}`}
                   className="h-[400px] rounded-[2rem] shadow-xl"
                 />
@@ -551,7 +831,10 @@ export default function AboutPage() {
 
               <motion.div variants={reveal}>
                 <ImageWithFallback
-                  src={school.aboutImageTwo || 'school-.png'}
+                  src={
+                    school.aboutImageTwo ||
+                    '/school-.png'
+                  }
                   alt={`School activities at ${school.name}`}
                   className="h-[400px] rounded-[2rem] shadow-xl"
                 />
@@ -572,7 +855,8 @@ export default function AboutPage() {
                 </p>
 
                 <p className="mt-2 text-sm text-white/65">
-                  Learning today for a better tomorrow.
+                  Learning today for a better
+                  tomorrow.
                 </p>
               </motion.div>
             </motion.div>
@@ -595,17 +879,21 @@ export default function AboutPage() {
                 className="mt-7 space-y-5 text-base leading-8 text-slate-600"
               >
                 <motion.p variants={reveal}>
-                  We believe that education should help students develop
-                  knowledge as well as character. Our learning environment
-                  encourages students to ask questions, participate actively,
-                  communicate confidently and take responsibility for their
-                  progress.
+                  We believe that education should help
+                  students develop knowledge as well as
+                  character. Our learning environment
+                  encourages students to ask questions,
+                  participate actively, communicate
+                  confidently and take responsibility
+                  for their progress.
                 </motion.p>
 
                 <motion.p variants={reveal}>
-                  Through committed teachers, supportive leadership and close
-                  cooperation with parents, the school works to provide a safe,
-                  welcoming and meaningful educational experience for every
+                  Through committed teachers, supportive
+                  leadership and close cooperation with
+                  parents, the school works to provide a
+                  safe, welcoming and meaningful
+                  educational experience for every
                   learner.
                 </motion.p>
 
@@ -634,7 +922,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Statistics */}
+        {/* ==================================================
+            STATISTICS
+        ================================================== */}
+
         <section className="bg-navy-950 py-14 text-white">
           <motion.div
             variants={containerAnimation}
@@ -667,7 +958,10 @@ export default function AboutPage() {
           </motion.div>
         </section>
 
-        {/* History */}
+        {/* ==================================================
+            HISTORY
+        ================================================== */}
+
         <section className="bg-slate-50 py-20 sm:py-24">
           <div className="section-shell">
             <SectionHeading
@@ -681,64 +975,72 @@ export default function AboutPage() {
               <div className="absolute bottom-0 left-5 top-0 w-px bg-blue-200 md:left-1/2" />
 
               <div className="space-y-10">
-                {timelineItems.map((item, index) => (
-                  <motion.article
-                    key={item.title}
-                    initial={{
-                      opacity: 0,
-                      y: 35,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                      amount: 0.25,
-                    }}
-                    transition={{
-                      duration: 0.55,
-                      delay: index * 0.08,
-                    }}
-                    className={`relative grid gap-7 pl-14 md:grid-cols-2 md:pl-0 ${
-                      index % 2 === 0
-                        ? ''
-                        : 'md:[&>div:first-child]:order-2'
-                    }`}
-                  >
-                    <div
-                      className={`rounded-3xl border border-slate-200 bg-white p-7 shadow-sm ${
+                {timelineItems.map(
+                  (item, index) => (
+                    <motion.article
+                      key={item.title}
+                      initial={{
+                        opacity: 0,
+                        y: 35,
+                      }}
+                      whileInView={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      viewport={{
+                        once: true,
+                        amount: 0.25,
+                      }}
+                      transition={{
+                        duration: 0.55,
+                        delay: index * 0.08,
+                      }}
+                      className={`relative grid gap-7 pl-14 md:grid-cols-2 md:pl-0 ${
                         index % 2 === 0
-                          ? 'md:mr-10'
-                          : 'md:ml-10'
+                          ? ''
+                          : 'md:[&>div:first-child]:order-2'
                       }`}
                     >
-                      <span className="inline-flex rounded-full bg-gold-400 px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-navy-950">
-                        {item.year}
+                      <div
+                        className={`rounded-3xl border border-slate-200 bg-white p-7 shadow-sm ${
+                          index % 2 === 0
+                            ? 'md:mr-10'
+                            : 'md:ml-10'
+                        }`}
+                      >
+                        <span className="inline-flex rounded-full bg-gold-400 px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-navy-950">
+                          {item.year}
+                        </span>
+
+                        <h3 className="mt-5 font-display text-2xl font-bold text-navy-950">
+                          {item.title}
+                        </h3>
+
+                        <p className="mt-3 leading-7 text-slate-600">
+                          {item.description}
+                        </p>
+                      </div>
+
+                      <div />
+
+                      <span className="absolute left-0 top-8 grid size-10 place-items-center rounded-full border-4 border-slate-50 bg-royal-600 text-white shadow-lg md:left-1/2 md:-translate-x-1/2">
+                        <CheckCircle2
+                          size={17}
+                          aria-hidden="true"
+                        />
                       </span>
-
-                      <h3 className="mt-5 font-display text-2xl font-bold text-navy-950">
-                        {item.title}
-                      </h3>
-
-                      <p className="mt-3 leading-7 text-slate-600">
-                        {item.description}
-                      </p>
-                    </div>
-
-                    <div />
-
-                    <span className="absolute left-0 top-8 grid size-10 place-items-center rounded-full border-4 border-slate-50 bg-royal-600 text-white shadow-lg md:left-1/2 md:-translate-x-1/2">
-                      <CheckCircle2 size={17} aria-hidden="true" />
-                    </span>
-                  </motion.article>
-                ))}
+                    </motion.article>
+                  ),
+                )}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Mission and vision */}
+        {/* ==================================================
+            MISSION / VISION
+        ================================================== */}
+
         <section className="bg-white py-20 sm:py-24">
           <div className="section-shell">
             <SectionHeading
@@ -771,7 +1073,10 @@ export default function AboutPage() {
                     className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-xl"
                   >
                     <span className="grid size-14 place-items-center rounded-2xl bg-blue-50 text-royal-600">
-                      <Icon size={27} aria-hidden="true" />
+                      <Icon
+                        size={27}
+                        aria-hidden="true"
+                      />
                     </span>
 
                     <h3 className="mt-6 font-display text-2xl font-bold text-navy-950">
@@ -788,7 +1093,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Core values */}
+        {/* ==================================================
+            CORE VALUES
+        ================================================== */}
+
         <section className="bg-navy-950 py-20 text-white sm:py-24">
           <div className="section-shell">
             <SectionHeading
@@ -821,7 +1129,10 @@ export default function AboutPage() {
                     className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur transition hover:border-gold-400/60 hover:bg-white/10"
                   >
                     <span className="mx-auto grid size-12 place-items-center rounded-2xl bg-gold-400 text-navy-950">
-                      <Icon size={23} aria-hidden="true" />
+                      <Icon
+                        size={23}
+                        aria-hidden="true"
+                      />
                     </span>
 
                     <h3 className="mt-4 font-display text-lg font-bold">
@@ -834,7 +1145,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Why choose */}
+        {/* ==================================================
+            WHY CHOOSE OUR SCHOOL
+        ================================================== */}
+
         <section className="bg-white py-20 sm:py-24">
           <div className="section-shell grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
@@ -892,11 +1206,11 @@ export default function AboutPage() {
               }}
               className="relative"
             >
-                <img
-  src={school.whyChooseImage}
-  alt={`Students learning at ${school.name}`}
-   className="h-[520px] w-full rounded-[2rem] object-cover"
-/>
+              <img
+                src={school.whyChooseImage}
+                alt={`Students learning at ${school.name}`}
+                className="h-[520px] w-full rounded-[2rem] object-cover"
+              />
 
               <div className="absolute bottom-6 left-6 right-6 rounded-3xl bg-navy-950/90 p-6 text-white backdrop-blur">
                 <p className="text-sm font-extrabold uppercase tracking-wider text-gold-400">
@@ -904,7 +1218,8 @@ export default function AboutPage() {
                 </p>
 
                 <p className="mt-2 font-display text-xl font-bold">
-                  Helping every learner become knowledgeable, confident and
+                  Helping every learner become
+                  knowledgeable, confident and
                   responsible.
                 </p>
               </div>
@@ -912,7 +1227,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Achievements */}
+        {/* ==================================================
+            ACHIEVEMENTS
+        ================================================== */}
+
         <section className="bg-slate-50 py-20 sm:py-24">
           <div className="section-shell">
             <SectionHeading
@@ -945,7 +1263,10 @@ export default function AboutPage() {
                     className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-xl"
                   >
                     <span className="grid size-12 place-items-center rounded-2xl bg-blue-50 text-royal-600">
-                      <Icon size={23} aria-hidden="true" />
+                      <Icon
+                        size={23}
+                        aria-hidden="true"
+                      />
                     </span>
 
                     <h3 className="mt-5 font-display text-xl font-bold text-navy-950">
@@ -962,61 +1283,172 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Leadership */}
-        <section className="bg-white py-20 sm:py-24">
+        {/* ==================================================
+            SCHOOL LEADERSHIP / TEAM
+        ================================================== */}
+
+        <section className="overflow-hidden bg-white py-20 sm:py-24">
           <div className="section-shell">
             <SectionHeading
               eyebrow="The people behind our school"
-              title="School Leadership and Team"
-              description="Our school is supported by responsible leadership, committed teachers and helpful administrative staff."
+              title="Meet Our School Team"
+              description="Meet the dedicated leaders, teachers and staff who work together to guide, support and inspire our students every day."
               centered
             />
 
+            {/* Team Grid */}
+
             <motion.div
-              variants={containerAnimation}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{
-                once: true,
-                amount: 0.15,
-              }}
-              className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5"
+              layout
+              className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
             >
-             {leadershipMembers.map((member) => (
-  <motion.article
-    key={member.position}
-    variants={reveal}
-    whileHover={{ y: -7 }}
-    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-xl"
-  >
-    <ImageWithFallback
-  src={member.image}
-  alt={`${member.name}, ${member.position} at ${school.name}`}
-  className="aspect-square w-full bg-slate-100"
-  imageClassName="object-cover"
-  imageStyle={{ objectPosition: 'center 20%' }}
-/>
+              {(showAllTeam
+                ? leadershipMembers
+                : leadershipMembers.slice(0, 5)
+              ).map((member, index) => (
+                <motion.article
+                  layout
+                  key={`${member.name}-${member.position}-${index}`}
+                  initial={{
+                    opacity: 0,
+                    y: 45,
+                    scale: 0.95,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                  }}
+                  viewport={{
+                    once: true,
+                    amount: 0.1,
+                  }}
+                  transition={{
+                    duration: 0.55,
+                    delay: Math.min(
+                      index * 0.06,
+                      0.3,
+                    ),
+                    ease: 'easeOut',
+                  }}
+                  whileHover={{
+                    y: -10,
+                  }}
+                  className="group relative overflow-hidden rounded-[2rem] bg-navy-950 shadow-md transition-shadow duration-500 hover:shadow-2xl"
+                >
+                  {/* Staff Photo */}
 
-    <div className="flex min-h-[130px] flex-col items-center justify-center p-5 text-center">
-      <h3 className="font-display text-lg font-bold leading-7 text-navy-950">
-        {member.name}
-      </h3>
+                  <div className="relative aspect-[4/5] overflow-hidden">
+                    <ImageWithFallback
+                      src={member.image}
+                      alt={`${member.name}, ${member.position} at ${school.name}`}
+                      className="absolute inset-0 h-full w-full bg-slate-100"
+                      imageClassName="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                      imageStyle={{
+                        objectPosition:
+                          'center 20%',
+                      }}
+                    />
 
-      <p className="mt-1 text-sm font-bold text-royal-600">
-        {member.position}
-      </p>
-    </div>
-  </motion.article>
-))}
+                    {/* Dark Gradient */}
+
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/15 to-transparent opacity-90 transition-all duration-500 group-hover:opacity-100" />
+
+                    {/* Blue Hover Effect */}
+
+                    <div className="pointer-events-none absolute inset-0 bg-royal-600/0 transition-all duration-500 group-hover:bg-royal-600/10" />
+
+                   
+
+                    {/* Person Information */}
+
+                    <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                      <div className="transition-transform duration-500 group-hover:-translate-y-2">
+                        <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-gold-400">
+                          {member.position}
+                        </p>
+
+                        <h3 className="mt-2 font-display text-xl font-bold leading-tight text-white">
+                          {member.name}
+                        </h3>
+
+                        {/* Revealed on Hover */}
+
+                        <div className="max-h-0 overflow-hidden opacity-0 transition-all duration-500 group-hover:mt-4 group-hover:max-h-24 group-hover:opacity-100">
+                          <div className="h-[2px] w-10 rounded-full bg-gold-400" />
+
+                          <p className="mt-3 text-sm font-medium leading-6 text-white/75">
+                            {school.name}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
             </motion.div>
+
+            {/* See More / Show Less */}
+
+            {leadershipMembers.length > 5 && (
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.5,
+                }}
+                className="mt-12 flex justify-center"
+              >
+                <motion.button
+                  type="button"
+                  onClick={() =>
+                    setShowAllTeam(
+                      (previous) => !previous,
+                    )
+                  }
+                  whileHover={{
+                    scale: 1.04,
+                  }}
+                  whileTap={{
+                    scale: 0.97,
+                  }}
+                  className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-navy-950 px-8 font-extrabold text-white shadow-lg transition-colors duration-300 hover:bg-royal-600"
+                >
+                  {showAllTeam
+                    ? 'Show Less'
+                    : 'See More Staff'}
+
+                  <ArrowRight
+                    size={18}
+                    aria-hidden="true"
+                    className={`transition-transform duration-300 ${
+                      showAllTeam
+                        ? '-rotate-90'
+                        : 'group-hover:translate-x-1'
+                    }`}
+                  />
+                </motion.button>
+              </motion.div>
+            )}
           </div>
         </section>
 
-        
+        {/* ==================================================
+            ADMISSION CTA
+        ================================================== */}
 
-        {/* Admission CTA */}
         <section className="relative isolate overflow-hidden bg-royal-600 py-20 text-white">
           <div className="absolute -left-24 -top-24 -z-10 size-80 rounded-full bg-white/10 blur-3xl" />
+
           <div className="absolute -bottom-32 -right-20 -z-10 size-96 rounded-full bg-navy-950/25 blur-3xl" />
 
           <motion.div
@@ -1047,8 +1479,10 @@ export default function AboutPage() {
               variants={reveal}
               className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/80"
             >
-              Give your child an opportunity to learn in a caring,
-              disciplined and encouraging environment at {school.name}.
+              Give your child an opportunity to
+              learn in a caring, disciplined and
+              encouraging environment at{' '}
+              {school.name}.
             </motion.p>
 
             <motion.div
@@ -1060,7 +1494,11 @@ export default function AboutPage() {
                 className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-gold-400 px-7 font-extrabold text-navy-950 transition hover:-translate-y-1 hover:bg-white"
               >
                 Apply Now
-                <ArrowRight size={18} aria-hidden="true" />
+
+                <ArrowRight
+                  size={18}
+                  aria-hidden="true"
+                />
               </a>
 
               <a

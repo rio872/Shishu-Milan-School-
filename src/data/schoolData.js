@@ -29,6 +29,8 @@ export const school = {
   academicsHeroImage: '/academics-hero.jpg',
   academicCalendarFile: '/academic-calendar.pdf',
   facilities:'facilities-hero.jpg',
+  contact: '/contact-hero.jpg',
+  
 
   phone: '01-5128064',
   email: 'shishu20649@gmail.com',
@@ -217,7 +219,7 @@ export const events = [
 
 export const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=85',
+    src: '/interactive-classroom.jpg',
     alt: 'Teacher guiding students inside a bright classroom',
     label: 'Interactive Classroom',
   },
@@ -232,12 +234,12 @@ export const galleryImages = [
     label: 'Student Activities',
   },
   {
-    src: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=85',
+    src: '/supportive-teacher.jpg',
     alt: 'Teacher assisting young students during a lesson',
     label: 'Supportive Teachers',
   },
   {
-    src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=85',
+    src: '/student success.jpg',
     alt: 'Students celebrating graduation outdoors',
     label: 'Student Success',
   },

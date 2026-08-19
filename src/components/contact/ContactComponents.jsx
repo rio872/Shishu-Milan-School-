@@ -155,23 +155,23 @@ function getSocialIcon(icon) {
 -------------------------------------------------- */
 
 export function ContactHero({
-  image = '/contact/contact-hero.jpg',
+  image = '/contact-hero.jpg',
 }) {
   return (
-    <section className="relative isolate min-h-[560px] overflow-hidden bg-navy-950 text-white">
+    <section className="relative min-h-[610px] overflow-hidden bg-navy-950 text-white">
+
+      {/* Background Image */}
       <img
-        src={image}
+        src="/contact-hero.jpg"
         alt={`Contact ${school.name}`}
-        className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
-        onError={(event) => {
-          event.currentTarget.style.display =
-            'none';
-        }}
+        className="absolute inset-0 z-0 h-full w-full object-cover object-center"
       />
 
-      <div className="absolute inset-0 -z-20 bg-gradient-to-r from-navy-950/95 via-navy-950/82 to-navy-950/35" />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-navy-950/90 via-navy-950/70 to-navy-950/30" />
 
-      <div className="section-shell relative z-10 flex min-h-[560px] items-center py-20">
+      {/* Content */}
+      <div className="section-shell relative z-20 flex min-h-[560px] items-center py-20">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -218,10 +218,9 @@ export function ContactHero({
             variants={reveal}
             className="mt-6 max-w-2xl text-lg leading-8 text-white/80 sm:text-xl"
           >
-            Contact {school.name} for
-            admission information, academic
-            enquiries, school visits,
-            transportation and general support.
+            Contact {school.name} for admission information,
+            academic enquiries, school visits, transportation
+            and general support.
           </motion.p>
         </motion.div>
       </div>
@@ -269,7 +268,7 @@ export function ContactInfoCards() {
             once: true,
             amount: 0.08,
           }}
-          className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+          className="mx-auto mt-12 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-4"
         >
           {contactInfoCards.map((item) => {
             const Icon =
