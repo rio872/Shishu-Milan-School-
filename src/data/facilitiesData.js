@@ -50,14 +50,6 @@ export const facilityCards = [
       'Basic first-aid support is available for minor injuries and immediate student health needs.',
   },
  
-  {
-    id: 'activity-hall',
-    title: 'Activity Hall',
-    icon: 'Presentation',
-    image: '/facilities/activity-hall.jpg',
-    description:
-      'A flexible space for assemblies, presentations, cultural activities, competitions and school events.',
-  },
  
 ];
 

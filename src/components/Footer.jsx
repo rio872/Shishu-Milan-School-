@@ -1,15 +1,35 @@
 import { useEffect, useState } from 'react';
+
 import {
   ArrowUp,
   Facebook,
   Instagram,
   Linkedin,
+  Music2,
   Mail,
   MessageCircle,
+ 
   Send,
 } from 'lucide-react';
 
 import { navLinks, school } from '../data/schoolData';
+import { socialLinks } from '../data/contactData';
+
+function getSocialIcon(icon) {
+  // If the icon is already a React/Lucide component
+  if (typeof icon !== 'string') {
+    return icon || Facebook;
+  }
+
+  const icons = {
+    facebook: Facebook,
+    instagram: Instagram,
+    linkedin: Linkedin,
+    tiktok: Music2,
+  };
+
+  return icons[icon.toLowerCase()] || Facebook;
+}
 
 /* TikTok icon because Lucide React does not include it */
 function TikTokIcon({ size = 18 }) {
@@ -144,7 +164,7 @@ export default function Footer() {
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/YOUR_INSTAGRAM_USERNAME',
+      url: 'https://www.instagram.com/shishumilanenglishschool2049?igsh=MW43enZjankzZDdtZA%3D%3D&utm_source=qr',
       icon: Instagram,
     },
     {
@@ -191,7 +211,7 @@ export default function Footer() {
             {/* Social media icons */}
             <div className="mt-6 flex flex-wrap gap-3">
               {socialLinks.map((social) => {
-                const Icon = social.icon;
+                const Icon = getSocialIcon(social.icon);
 
                 return (
                   <a
@@ -244,7 +264,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#academics"
+                href="/contact"
                 className="transition hover:text-gold-400"
               >
                 Academic Programs
@@ -253,14 +273,14 @@ export default function Footer() {
               
 
               <a
-                href="#contact"
+                href="/contact"
                 className="transition hover:text-gold-400"
               >
                 Book a School Visit
               </a>
 
               <a
-                href="#contact"
+                href="/contact"
                 className="transition hover:text-gold-400"
               >
                 Request Information

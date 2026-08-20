@@ -244,7 +244,7 @@ export const galleryImages = [
     label: 'Student Success',
   },
   {
-    src: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=85',
+    src: '/reading-culture.jpg',
     alt: 'Open books arranged for study in a library',
     label: 'Reading Culture',
   },

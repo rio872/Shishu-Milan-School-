@@ -23,6 +23,7 @@ import {
   Linkedin,
   LoaderCircle,
   Mail,
+  Music2,
   MapPin,
   MessageCircle,
   Phone,
@@ -39,7 +40,7 @@ import {
   contactInfoCards,
   departmentContacts,
   enquirySubjects,
-  socialMediaLinks,
+  socialLinks,
 } from '../../data/contactData';
 
 import { school } from '../../data/schoolData';
@@ -141,13 +142,19 @@ function getDepartmentIcon(icon) {
 }
 
 function getSocialIcon(icon) {
+  // If the icon is already a React/Lucide component
+  if (typeof icon !== 'string') {
+    return icon || Facebook;
+  }
+
   const icons = {
     facebook: Facebook,
     instagram: Instagram,
     linkedin: Linkedin,
+    tiktok: Music2,
   };
 
-  return icons[icon] || ExternalLink;
+  return icons[icon.toLowerCase()] || Facebook;
 }
 
 /* --------------------------------------------------
@@ -1307,7 +1314,7 @@ export function SocialLinks() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-3">
-            {socialMediaLinks.map((social) => {
+            {socialLinks.map((social) => {
               const Icon =
                 getSocialIcon(
                   social.icon,

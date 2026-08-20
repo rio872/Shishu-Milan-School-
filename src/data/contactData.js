@@ -165,42 +165,26 @@ export const contactFaqs = [
   },
 ];
 
-export const socialMediaLinks = [
+export const socialLinks = [
   {
-    id: 1,
     name: 'Facebook',
     icon: 'facebook',
-    href:
-      school.socialLinks?.facebook ||
-      school.facebook ||
-      '[FACEBOOK LINK]',
+    href: 'https://www.facebook.com/share/19P2umYQPi/?mibextid=wwXIfr',
   },
   {
-    id: 2,
     name: 'TikTok',
     icon: 'tiktok',
-    href:
-      school.socialLinks?.tiktok ||
-      school.tiktok ||
-      '[TIKTOK LINK]',
+    href: 'https://www.tiktok.com/@shishu.milan.engl',
   },
   {
-    id: 3,
     name: 'Instagram',
     icon: 'instagram',
-    href:
-      school.socialLinks?.instagram ||
-      school.instagram ||
-      '[INSTAGRAM LINK]',
+    href: 'https://www.instagram.com/shishumilanenglishschool2049?igsh=MW43enZjankzZDdtZA%3D%3D&utm_source=qr',
   },
   {
-    id: 4,
     name: 'LinkedIn',
     icon: 'linkedin',
-    href:
-      school.socialLinks?.linkedin ||
-      school.linkedin ||
-      '[LINKEDIN LINK]',
+    href: 'https://www.linkedin.com/company/shishu-milan-english-school/?viewAsMember=true',
   },
 ];
 

@@ -385,12 +385,14 @@ const leadershipMembers = [
       school.chairpersonName ||
       'RADHE SHYAM SHRESTHA',
     position: 'Chairperson',
-    image: '/chairperson.png',
+    image: '/chairperson.jpg',
+     objectPosition: 'center -10%',
   },
   {
     name: 'PARBATI SHRESTHA',
     position: 'Principal',
     image: '/principal.jpg',
+    objectPosition: 'center 60%',
   },
   {
     name: 'ROSY SHRESTHA',
@@ -409,169 +411,179 @@ const leadershipMembers = [
   },
 
   /* Add your remaining teachers here */
-
   {
-    name: 'Ranjana Dhahal',
-    position: 'Nepali Teacher',
-    image: '/staff/nepali.jpg',
+    name: 'STAFF NAME',
+    position: 'Pre-Primary Incharge',
+    image: '/staff/staff-31.jpg',
   },
   {
-    name: 'Manish Baral',
-    position: 'Computer Teacher',
-    image: '/staff/computer.jpg',
+    name: 'Mira Shrestha',
+    position: 'Primary incharge',
+    image: '/staff/staff-15.jpg',
   },
   {
-    name: 'Madan',
-    position: 'Science Teacher',
-    image: '/staff/science.jpg',
+    name: 'Puja Sharma Akangme',
+    position: 'Elementary Incharge',
+    image: '/staff/staff-11.jpg',
+  },
+  {
+    name: 'Srijana Shrestha',
+    position: 'Secondary Incharge',
+    image: '/staff/staff-9.jpg',
   },
   {
     name: 'Ritesh Kuikel',
-    position: 'Health Teacher',
+    position: 'ECA Incharge',
     image: '/staff/health.jpg',
+  },
+  {
+    name: 'Anjana Shrestha',
+    position: 'Teacher',
+    image: '/staff/staff-19.jpg',
+  },
+ 
+  {
+    name: 'Ranjana Dhahal',
+    position: 'Teacher',
+    image: '/staff/nepali.jpg',
+  },
+  {
+    name: 'Gautam Magar',
+    position: 'Teacher',
+    image: '/staff/staff-6.jpg',
+  },
+  
+  {
+    name: 'Madan Katuwal',
+    position: 'Teacher',
+    image: '/staff/science.jpg',
+  },
+  {
+    name: 'Manish Baral',
+    position: 'Teacher',
+    image: '/staff/computer.jpg',
   },
   
   {
     name: 'Namrata Shiwakoti',
-    position: 'Secondary Teacher',
+    position: 'Teacher',
     image: '/staff/staff-5.jpg',
   },
   
   {
     name: 'Sunita Thami',
-    position: 'Mathematics Teacher',
+    position: 'Teacher',
     image: '/staff/staff-7.jpg',
   },
-   {
-    name: 'Gautam Magar',
-    position: 'English Teacher',
-    image: '/staff/staff-6.jpg',
-  },
+   
   {
     name: 'Sajani Shrestha',
-    position: 'Science Teacher',
+    position: 'Teacher',
     image: '/staff/staff-8.jpg',
   },
-  {
-    name: 'Srijana Shrestha',
-    position: 'Computer Teacher',
-    image: '/staff/staff-9.jpg',
-  },
+  
   {
     name: 'Kumari Tamang',
-    position: 'Administrative Staff',
+    position: 'Teacher',
     image: '/staff/staff-10.jpg',
   },
-  {
-    name: 'Puja Sharma Akangme',
-    position: 'Administrative Staff',
-    image: '/staff/staff-11.jpg',
-  },
+  
   {
     name: 'Phoolmaya Shrestha',
-    position: 'Administrative Staff',
+    position: 'Teacher',
     image: '/staff/staff-12.jpg',
   },
   {
     name: 'Binita Basnet',
-    position: 'Administrative Staff',
+    position: 'Teacher',
     image: '/staff/staff-13.jpg',
   },
   {
     name: 'Hema Gubhaju',
-    position: 'Administrative Staff',
+    position: 'Teacher',
     image: '/staff/staff-14.jpg',
   },
-  {
-    name: 'Mira Shrestha',
-    position: 'Administrative Staff',
-    image: '/staff/staff-15.jpg',
-  },
+  
   {
     name: 'Kamala Tamang',
-    position: 'Administrative Staff',
+    position: 'Teacher',
     image: '/staff/staff-16.jpg',
   },
   {
     name: 'Chanda Dhakal Shrestha',
-    position: 'Administrative Staff',
+    position: 'Teacher',
     image: '/staff/staff-17.jpg',
   },
   {
     name: 'Goma Shrestha',
-    position: 'Administrative Staff',
+    position: 'Teacher',
     image: '/staff/staff-18.jpg',
   },
   {
-    name: 'Anjana Shrestha',
+    name: 'Smriti Shrestha',
     position: 'Administrative Staff',
-    image: '/staff/staff-19.jpg',
+    image: '/staff/staff-32.jpg',
+  },
+
+ 
+  {
+    name: 'Swornish Shahi Thakuri',
+    position: 'Teacher',
+    image: '/staff/staff-28.jpg',
   },
   {
+    name: 'Rina Shrestha',
+    position: 'Teacher',
+    image: '/staff/staff-29.jpg',
+  },
+   {
     name: 'Sita Maya Shrestha',
-    position: 'Administrative Staff',
+    position: 'Dance Teacher',
     image: '/staff/staff-20.jpg',
   },
   {
+    name: 'Aditya Shrestha',
+    position: 'Rubgy Coach',
+    image: '/staff/staff-30.jpg',
+  },
+  
+  {
     name: 'Amit Shrestha',
-    position: 'ECA Incharge',
+    position: 'Football Coach',
     image: '/staff/staff-21.jpg',
   },
   {
     name: 'Sarmila Shrestha',
-    position: 'Administrative Staff',
+    position: 'Staff',
     image: '/staff/staff-22.jpg',
   },
   {
     name: 'Ratna Maya Tamang',
-    position: 'Administrative Staff',
+    position: 'Staff',
     image: '/staff/staff-23.jpg',
   },
   {
     name: 'Amrita Manandhar',
-    position: 'Administrative Staff',
+    position: 'Staff',
     image: '/staff/staff-24.jpg',
   },
   {
     name: 'Ram Tamang',
-    position: 'Administrative Staff',
+    position: 'Driver',
     image: '/staff/staff-25.jpg',
   },
   {
     name: 'Nisha Shrestha',
-    position: 'Administrative Staff',
+    position: 'Staff',
     image: '/staff/staff-26.jpg',
   },
   {
-    name: 'STAFF NAME',
-    position: 'Administrative Staff',
+    name: 'Smriti Shrestha',
+    position: 'Staff',
     image: '/staff/staff-27.jpg',
   },
-  {
-    name: 'STAFF NAME',
-    position: 'Administrative Staff',
-    image: '/staff/staff-28.jpg',
-  },
-  {
-    name: 'STAFF NAME',
-    position: 'Administrative Staff',
-    image: '/staff/staff-29.jpg',
-  },
-  {
-    name: 'STAFF NAME',
-    position: 'Administrative Staff',
-    image: '/staff/staff-30.jpg',
-  },
-  {
-    name: 'STAFF NAME',
-    position: 'Administrative Staff',
-    image: '/staff/staff-31.jpg',
-  },
-  {
-    name: 'STAFF NAME',
-    position: 'Administrative Staff',
-    image: '/staff/staff-32.jpg',
-  },
+  
+  
   {
     name: 'STAFF NAME',
     position: 'Administrative Staff',
@@ -1345,8 +1357,7 @@ export default function AboutPage() {
                       className="absolute inset-0 h-full w-full bg-slate-100"
                       imageClassName="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                       imageStyle={{
-                        objectPosition:
-                          'center 20%',
+                        objectPosition: member.objectPosition || 'center 20%',
                       }}
                     />
 
