@@ -386,7 +386,7 @@ const leadershipMembers = [
       'RADHE SHYAM SHRESTHA',
     position: 'Chairperson',
     image: '/chairperson.jpg',
-     objectPosition: 'center -10%',
+     objectPosition: 'center -1px',
   },
   {
     name: 'PARBATI SHRESTHA',

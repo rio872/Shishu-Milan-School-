@@ -229,7 +229,7 @@ export const galleryImages = [
     label: 'Happy Learning',
   },
   {
-    src: 'https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=85',
+    src: '/student-activities.jpg',
     alt: 'Students participating in a classroom activity',
     label: 'Student Activities',
   },
