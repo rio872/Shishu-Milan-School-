@@ -584,11 +584,7 @@ const leadershipMembers = [
   },
   
   
-  {
-    name: 'STAFF NAME',
-    position: 'Administrative Staff',
-    image: '/staff/staff-33.jpg',
-  },
+  
 ];
 
 /* --------------------------------------------------
