@@ -454,7 +454,7 @@ const leadershipMembers = [
   },
   
   {
-    name: 'Madan Katuwal',
+    name: 'Madan Katwal',
     position: 'Teacher',
     image: '/staff/science.jpg',
   },
