@@ -64,7 +64,7 @@ function GalleryHero() {
       <img
         src={
           school.galleryHeroImage ||
-          '/gallery/gallery-hero.jpg'
+          '/gallery-hero.jpg'
         }
         alt={`Student activities at ${school.name}`}
         className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
