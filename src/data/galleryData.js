@@ -15,7 +15,7 @@ export const galleryCategories = [
 export const galleryItems = [
     {
     id: 1,
-    image: '/public/reward.jpg',
+    image: '/reward.jpg',
     title: 'Monthly Consistent Student Reward ',
     category: 'Monthly Rewards',
     description:
@@ -26,7 +26,7 @@ export const galleryItems = [
   },
     {
     id: 2,
-    image: '/public/reward-1.jpg',
+    image: '/reward-1.jpg',
     title: 'Dancer of the Month Reward',
     category: 'Monthly Rewards',
     description:
@@ -37,7 +37,7 @@ export const galleryItems = [
   },
   {
     id: 3,
-    image: '/public/outdoor-learning.jpg',
+    image: '/outdoor-learning.jpg',
     title: 'Outdoor Learning',
     category: 'Field Visit',
     description:
@@ -48,7 +48,7 @@ export const galleryItems = [
   },
   {
     id: 4,
-    image: '/public/collaborative-group-learning.jpg',
+    image: '/collaborative-group-learning.jpg',
     title: 'Collaborative Group Learning',
     category: 'Field Visit',
     description:
@@ -59,7 +59,7 @@ export const galleryItems = [
   },
   {
     id: 5,
-    image: '/public/sports-day.jpg',
+    image: '/sports-day.jpg',
     title: 'Annual Sports Day',
     category: 'Sports',
     description:
@@ -70,7 +70,7 @@ export const galleryItems = [
   },
   {
     id: 6,
-    image: '/public/inter-school.jpg',
+    image: '/inter-school.jpg',
     title: 'Inter-School Football Match',
     category: 'Sports',
     description:
@@ -81,7 +81,7 @@ export const galleryItems = [
   },
   {
     id: 7,
-    image: '/public/cultural-dance.jpg',
+    image: '/cultural-dance.jpg',
     title: 'Traditional Cultural Dance',
     category: 'Cultural Programs',
     description:
@@ -92,7 +92,7 @@ export const galleryItems = [
   },
   {
     id: 8,
-    image: '/public/cultural-music.jpg',
+    image: '/cultural-music.jpg',
     title: 'Student Musical Performance',
     category: 'Cultural Programs',
     description:
@@ -104,7 +104,7 @@ export const galleryItems = [
  
   {
     id: 9,
-    image: '/public/computer-learning.jpg',
+    image: '/computer-learning.jpg',
     title: 'Digital Learning Session',
     category: 'Science and Technology',
     description:
@@ -115,7 +115,7 @@ export const galleryItems = [
   },
    {
     id: 10,
-    image: '/public/computer-learning-1.jpg',
+    image: '/computer-learning-1.jpg',
     title: 'Digital Learning Session',
     category: 'Science and Technology',
     description:
@@ -126,7 +126,7 @@ export const galleryItems = [
   },
   {
     id: 11,
-    image: '/public/dental.jpg',
+    image: '/dental.jpg',
     title: 'Dental Check-Up Program',
     category: 'Health Camp',
     description:
@@ -137,7 +137,7 @@ export const galleryItems = [
   },
   {
     id: 12,
-    image: '/public/blood.jpg',
+    image: '/blood.jpg',
     title: 'Blood Group Identification Program',
     category: 'Health Camp',
     description:
@@ -148,7 +148,7 @@ export const galleryItems = [
   },
   {
     id: 13,
-    image: '/public/summer-day-1.jpg',
+    image: '/summer-day-1.jpg',
     title: 'Summer Day Celebration',
     category: 'Summer Day',
     description:
@@ -159,7 +159,7 @@ export const galleryItems = [
   },
   {
     id: 14,
-    image: '/public/summer-day-2.jpg',
+    image: '/summer-day-2.jpg',
     title: 'Summer Day Celebration',
     category: 'Summer Day',
     description:
@@ -170,7 +170,7 @@ export const galleryItems = [
   },
   {
     id: 15,
-    image: '/public/little-icon-1.jpg',
+    image: '/little-icon-1.jpg',
     title: 'Annual Little Icon Program',
     category: 'Little Icon',
     description:
@@ -181,7 +181,7 @@ export const galleryItems = [
   },
   {
     id: 16,
-    image: '/public/little-icon-2.jpg',
+    image: '/little-icon-2.jpg',
     title: 'Annual Little Icon Program',
     category: 'Little Icon',
     description:
@@ -192,7 +192,7 @@ export const galleryItems = [
   },
   {
     id: 17,
-    image: '/public/Horse-1.jpg',
+    image: '/Horse-1.jpg',
     title: 'Horse Riding Adventure',
     category: 'Horse Riding',
     description:
@@ -201,7 +201,7 @@ export const galleryItems = [
   },
   {
     id: 18,
-    image: '/public/Horse-2.jpg',
+    image: '/Horse-2.jpg',
     title: 'Horse Riding Adventure',
     category: 'Horse Riding',
     description:
@@ -210,7 +210,7 @@ export const galleryItems = [
   },
   {
     id: 19,
-    image: '/public/election-1.jpg',
+    image: '/election-1.jpg',
     title: 'Student Council Election',
     category: 'School Election',
     description:
@@ -219,7 +219,7 @@ export const galleryItems = [
   },
   {
     id: 20,
-    image: '/public/election-2.jpg',
+    image: '/election-2.jpg',
     title: 'Young Leaders in Action',
     category: 'School Election',
     description:
