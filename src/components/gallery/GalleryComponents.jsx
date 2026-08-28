@@ -44,7 +44,7 @@ const stagger = {
 -------------------------------------------------- */
 
 export function GalleryHero({
-  image = '/public/gallery-hero.jpg',
+  image = '/gallery-hero.jpg',
 }) {
   return (
     <section className="relative isolate min-h-[560px] overflow-hidden bg-navy-950 text-white">
