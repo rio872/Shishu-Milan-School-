@@ -84,7 +84,7 @@ export const navLinks = [
 ];
 
 export const stats = [
-  { value: 25, suffix: '+', label: 'Years of Excellence' },
+  { value: 30, suffix: '+', label: 'Years of Excellence' },
   { value: 1200, suffix: '+', label: 'Active Students' },
   { value: 35, suffix: '+', label: 'Qualified Teachers' },
   { value: 96, suffix: '%', label: 'Board Exam Success' },
